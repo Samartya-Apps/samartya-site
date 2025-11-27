@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+// The required Google Form URL
+const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeuG9LUyuAlLj899Cgp2ykFQEeT3HJPIwbtqsMT5HoDR5xcYA/viewform?usp=dialog';
+---
+
+<meta http-equiv="refresh" content={`0; url=${GOOGLE_FORM_URL}`}>
+
+<Layout title="Account Deletion Request - Samartya">
+    <main class="max-w-xl mx-auto p-4 md:p-8 text-center">
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">
+            Requesting Account Deletion...
+        </h1>
+        <p class="text-lg text-gray-600 mb-6">
+            You are being redirected to our secure form to submit your account deletion request.
+        </p>
+
+        <a 
+            href={GOOGLE_FORM_URL} 
+            class="inline-block px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition-colors"
+        >
+            Click here if you are not redirected
+        </a>
+
+        <p class="mt-8 text-sm text-gray-500">
+            This page is located at **samartya.com/delete-account**
+        </p>
+    </main>
+</Layout>

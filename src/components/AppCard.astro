@@ -1,0 +1,45 @@
+---
+// Define the component's expected properties (props)
+interface Props {
+    // iconName property has been removed
+    title: string;
+    description: string;
+    appStoreLink: string;
+    playStoreLink: string;
+}
+
+const { title, description, appStoreLink, playStoreLink } = Astro.props;
+
+// Determine a simple character/symbol for the app title
+const leadingSymbol = title.includes('Dyslexia') ? '📚' : '🗣️';
+---
+
+<div class="border rounded-lg shadow-md p-6 bg-white hover:shadow-xl transition-shadow duration-300">
+    <div class="flex items-center mb-4">
+        <div class="text-indigo-600 mr-4 text-3xl font-serif">
+            {leadingSymbol}
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900">{title}</h3>
+    </div>
+    <p class="text-gray-700 mb-6">{description}</p>
+    
+    <div class="flex space-x-4">
+        <a 
+            href={appStoreLink} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+        >
+            🍎 App Store
+        </a>
+
+        <a 
+            href={playStoreLink} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+        >
+            🤖 Play Store
+        </a>
+    </div>
+</div>
