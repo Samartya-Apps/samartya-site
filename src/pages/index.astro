@@ -1,16 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Button from '../components/Button.astro';
-import Card from '../components/Card.astro';
-import Testimonial from '../components/Testimonial.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+import Testimonial from "../components/Testimonial.astro";
 ---
 
-<Layout 
-  title="Samartya Apps — Language & Reading Apps for Children with Disabilities" 
-  description="Evidence-based apps for children with autism, dyslexia, and language disorders. FreeSpeech teaches grammar through pictures. Dyslexia Reader makes classroom reading accessible.">
-
-  <Hero 
+<Layout
+  title="Samartya Apps — Language & Reading Apps for Children with Disabilities"
+  description="Evidence-based apps for children with autism, dyslexia, and language disorders. FreeSpeech teaches grammar through pictures. Dyslexia Reader makes classroom reading accessible."
+>
+  <Hero
     title="Every child deserves the power of language."
     subtitle="Samartya Apps builds evidence-based tools that help children with autism, dyslexia, and language disabilities learn to communicate, read, and thrive. Used by therapists, teachers, and families across the US and India."
     align="left"
@@ -18,7 +18,9 @@ import Testimonial from '../components/Testimonial.astro';
   >
     <Fragment slot="actions">
       <Button href="/freespeech">Explore FreeSpeech</Button>
-      <Button href="/dyslexia-reader" variant="outline">Explore Dyslexia Reader</Button>
+      <Button href="/dyslexia-reader" variant="outline">
+        Explore Dyslexia Reader
+      </Button>
     </Fragment>
     <Fragment slot="visual">
       <div class="video-placeholder">
@@ -34,10 +36,21 @@ import Testimonial from '../components/Testimonial.astro';
       <div class="product-cards">
         <Card title="FreeSpeech" icon="/img/freespeech-icon.png">
           <strong>Teach grammar through pictures.</strong>
-          <p>Children drag and drop visual tiles to build sentences — and FreeSpeech converts them into grammatically correct English. The only app of its kind, FreeSpeech makes the invisible rules of grammar visible and interactive.</p>
+          <p>
+            Children drag and drop visual tiles to build sentences — and
+            FreeSpeech converts them into grammatically correct English. The
+            only app of its kind, FreeSpeech makes the invisible rules of
+            grammar visible and interactive.
+          </p>
           <ul class="features-list text-left">
-            <li><strong>Designed for:</strong> Children with autism, language disorders, hearing impairments, and English language learners.</li>
-            <li><strong>Used by:</strong> Speech-language pathologists, special educators, and parents.</li>
+            <li>
+              <strong>Designed for:</strong> Children with autism, language disorders,
+              hearing impairments, and English language learners.
+            </li>
+            <li>
+              <strong>Used by:</strong> Speech-language pathologists, special educators,
+              and parents.
+            </li>
             <li><strong>Available on:</strong> iOS · Android</li>
           </ul>
           <div class="mt-auto">
@@ -47,14 +60,27 @@ import Testimonial from '../components/Testimonial.astro';
 
         <Card title="Dyslexia Reader" icon="/img/dyslexia-reader-icon.png">
           <strong>Make any reading material accessible.</strong>
-          <p>Scan a physical page or upload a PDF — Dyslexia Reader digitizes it and adds powerful reading supports: text-to-speech, syllabification, onset/rime, dictionary, and more. Built on 20+ years of research.</p>
-           <ul class="features-list text-left">
-            <li><strong>Designed for:</strong> Children with dyslexia and reading difficulties.</li>
-            <li><strong>Used by:</strong> Teachers, reading specialists, resource room coordinators, and parents.</li>
-            <li><strong>Available on:</strong> iOS · Android · Web (coming soon)</li>
+          <p>
+            Scan a physical page or upload a PDF — Dyslexia Reader digitizes it
+            and adds powerful reading supports: text-to-speech, syllabification,
+            onset/rime, dictionary, and more. Built on 20+ years of research.
+          </p>
+          <ul class="features-list text-left">
+            <li>
+              <strong>Designed for:</strong> Children with dyslexia and reading difficulties.
+            </li>
+            <li>
+              <strong>Used by:</strong> Teachers, reading specialists, resource room
+              coordinators, and parents.
+            </li>
+            <li>
+              <strong>Available on:</strong> iOS · Android · Web (coming soon)
+            </li>
           </ul>
           <div class="mt-auto">
-            <Button href="/dyslexia-reader" variant="outline">Learn more →</Button>
+            <Button href="/dyslexia-reader" variant="outline">
+              Learn more →
+            </Button>
           </div>
         </Card>
       </div>
@@ -63,16 +89,32 @@ import Testimonial from '../components/Testimonial.astro';
 
   <section class="section section-alt">
     <div class="container">
-      <h2 class="text-center mb-12">Built on research. Proven in classrooms.</h2>
+      <h2 class="text-center mb-12">
+        Built on research. Proven in classrooms.
+      </h2>
       <div class="grid-3">
         <Card title="Research-Rooted">
-          <p>FreeSpeech is based on original linguistic research that was the subject of a TED talk viewed over 1 million times. Dyslexia Reader draws on 20+ years of evidence-based strategies developed by the Madras Dyslexia Association.</p>
+          <p>
+            FreeSpeech is based on original linguistic research that was the
+            subject of a TED talk viewed over 1 million times. Dyslexia Reader
+            draws on 20+ years of evidence-based strategies developed by the
+            Madras Dyslexia Association.
+          </p>
         </Card>
         <Card title="Designed for Educators">
-          <p>Our apps are built in collaboration with speech-language pathologists, special educators, and researchers with over 100 years of collective experience. Every feature fits into real therapy sessions and classrooms.</p>
+          <p>
+            Our apps are built in collaboration with speech-language
+            pathologists, special educators, and researchers with over 100 years
+            of collective experience. Every feature fits into real therapy
+            sessions and classrooms.
+          </p>
         </Card>
         <Card title="Accessible & Affordable">
-          <p>Free to download and try. Subscription and one-time purchase options. Apple Volume Purchase Program (VPP) support with 50% off for 20+ school licenses.</p>
+          <p>
+            Free to download and try. Subscription and one-time purchase
+            options. Apple Volume Purchase Program (VPP) support with 50% off
+            for 20+ school licenses.
+          </p>
         </Card>
       </div>
     </div>
@@ -81,13 +123,16 @@ import Testimonial from '../components/Testimonial.astro';
   <section class="section section-light text-center">
     <div class="container">
       <h2 class="mb-12">The idea behind FreeSpeech</h2>
-      <div class="video-embed-container">
-        <!-- Placeholder for TED talk embed -->
-        <div class="video-placeholder rounded">
-          <div class="box">TED Talk Embed: Ajit Narayanan</div>
-        </div>
-      </div>
-      <p class="max-w-m mx-auto mt-6">Ajit Narayanan's TED talk on the visual language system behind FreeSpeech has been viewed over 1 million times. The technology he describes is now available as an app used by therapists and educators worldwide.</p>
+      <div
+        class="video-embed-container max-w-m mx-auto"
+        set:html={`<div style="max-width:1024px; margin:0 auto;"><div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://embed.ted.com/talks/ajit_narayanan_a_word_game_to_communicate_in_any_language" width="1024px" height="576px" title="A word game to communicate in any language" style="position:absolute;left:0;top:0;width:100%;height:100%"  frameborder="0" scrolling="no" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen webkitallowfullscreen mozallowfullscreen onload="window.parent.postMessage('iframeLoaded', 'https://embed.ted.com')"></iframe></div></div>`}
+      />
+      <p class="max-w-m mx-auto mt-12">
+        Ajit Narayanan's TED talk on the visual language system behind
+        FreeSpeech has been viewed over 1 million times. The technology he
+        describes is now available as an app used by therapists and educators
+        worldwide.
+      </p>
     </div>
   </section>
 
@@ -106,18 +151,35 @@ import Testimonial from '../components/Testimonial.astro';
 
   <section class="section section-light">
     <div class="container">
-      <h2 class="text-center mb-12">Built for the people who support children every day.</h2>
+      <h2 class="text-center mb-12">
+        Built for the people who support children every day.
+      </h2>
       <div class="grid-3">
         <Card title="For SLPs & Therapists">
-          <p>FreeSpeech integrates into your therapy sessions. Create custom challenges aligned to IEP goals, adjust vocabulary and grammar scaffolding levels, and track student progress — all within the app.</p>
-          <a href="/freespeech/for-therapists">See how therapists use FreeSpeech →</a>
+          <p>
+            FreeSpeech integrates into your therapy sessions. Create custom
+            challenges aligned to IEP goals, adjust vocabulary and grammar
+            scaffolding levels, and track student progress — all within the app.
+          </p>
+          <a href="/freespeech/for-therapists"
+            >See how therapists use FreeSpeech →</a
+          >
         </Card>
         <Card title="For Teachers & Schools">
-          <p>Both apps work with your existing classroom materials. Dyslexia Reader turns your textbooks into accessible reading experiences. FreeSpeech supports language goals across subjects. Volume pricing makes it affordable.</p>
+          <p>
+            Both apps work with your existing classroom materials. Dyslexia
+            Reader turns your textbooks into accessible reading experiences.
+            FreeSpeech supports language goals across subjects. Volume pricing
+            makes it affordable.
+          </p>
           <a href="/for-schools">See our school plans →</a>
         </Card>
         <Card title="For Parents & Families">
-          <p>Give your child tools that work alongside their school support. Both apps are easy to use at home and designed to build independence over time.</p>
+          <p>
+            Give your child tools that work alongside their school support. Both
+            apps are easy to use at home and designed to build independence over
+            time.
+          </p>
           <a href="/freespeech/for-parents">See how families use our apps →</a>
         </Card>
       </div>
@@ -128,17 +190,17 @@ import Testimonial from '../components/Testimonial.astro';
     <div class="container">
       <h2 class="text-center mb-12">What educators and families are saying</h2>
       <div class="grid-3">
-        <Testimonial 
+        <Testimonial
           quote="I use this with my kids who have language disorders and this app goes very far in helping them expand their language. I love it and it is a very well designed app! Well worth any price!"
           author="Speech-Language Pathologist"
           role="App Store Review (FreeSpeech)"
         />
-        <Testimonial 
+        <Testimonial
           quote="Language structure made visual… What a wonderful way to help kids really 'see' language structure."
           author="Educator"
           role="App Store Review (FreeSpeech)"
         />
-        <Testimonial 
+        <Testimonial
           quote="It is probably the only app I've seen that actually makes it fun and stress-free to work with English sentences."
           author="Therapist"
           role="App Store Review (FreeSpeech)"
@@ -150,10 +212,17 @@ import Testimonial from '../components/Testimonial.astro';
   <section class="section section-primary text-center">
     <div class="container">
       <h2 class="mb-6">Bring Samartya Apps to your school or district.</h2>
-      <p class="mb-8">Free evaluation copies for AT specialists and SLPs. Volume pricing with Apple VPP (50% off for 20+ licenses). FERPA/COPPA compliant.</p>
+      <p class="mb-8">
+        Free evaluation copies for AT specialists and SLPs. Volume pricing with
+        Apple VPP (50% off for 20+ licenses). FERPA/COPPA compliant.
+      </p>
       <div class="hero-actions">
-        <Button href="/for-schools/request-trial" variant="secondary">Request a School Trial</Button>
-        <Button href="/for-schools/pricing" variant="outline">See Pricing</Button>
+        <Button href="/for-schools/request-trial" variant="secondary"
+          >Request a School Trial</Button
+        >
+        <Button href="/for-schools/pricing" variant="outline"
+          >See Pricing</Button
+        >
       </div>
     </div>
   </section>
@@ -161,14 +230,21 @@ import Testimonial from '../components/Testimonial.astro';
   <section class="section section-light">
     <div class="container text-center">
       <h2>Stay in the loop.</h2>
-      <p class="mb-8 max-w-m mx-auto">Tips for therapists and teachers, product updates, and research insights — delivered monthly. No spam, ever.</p>
+      <p class="mb-8 max-w-m mx-auto">
+        Tips for therapists and teachers, product updates, and research insights
+        — delivered monthly. No spam, ever.
+      </p>
       <form class="newsletter-form">
-        <input type="email" placeholder="Your email address" required class="input-field" />
+        <input
+          type="email"
+          placeholder="Your email address"
+          required
+          class="input-field"
+        />
         <Button variant="primary">Subscribe</Button>
       </form>
     </div>
   </section>
-
 </Layout>
 
 <style>
@@ -190,7 +266,7 @@ import Testimonial from '../components/Testimonial.astro';
     grid-template-columns: 1fr;
     gap: var(--spacing-8);
   }
-  
+
   @media (min-width: 768px) {
     .grid-3 {
       grid-template-columns: repeat(3, 1fr);
@@ -202,7 +278,7 @@ import Testimonial from '../components/Testimonial.astro';
     margin-bottom: var(--spacing-6);
     font-size: 0.95rem;
   }
-  
+
   .features-list li {
     margin-bottom: var(--spacing-2);
   }
@@ -210,15 +286,30 @@ import Testimonial from '../components/Testimonial.astro';
   .mt-auto {
     margin-top: auto;
   }
-  
+
   .text-left {
     text-align: left;
   }
-  
-  .mb-6 { margin-bottom: var(--spacing-6); }
-  .mb-8 { margin-bottom: var(--spacing-8); }
-  .mb-12 { margin-bottom: var(--spacing-12); }
-  
+
+  .mb-6 {
+    margin-bottom: var(--spacing-6);
+  }
+  .mb-8 {
+    margin-bottom: var(--spacing-8);
+  }
+  .mb-12 {
+    margin-bottom: var(--spacing-12);
+  }
+  .mt-6 {
+    margin-top: var(--spacing-6);
+  }
+  .mt-8 {
+    margin-top: var(--spacing-8);
+  }
+  .mt-12 {
+    margin-top: var(--spacing-12);
+  }
+
   .max-w-m {
     max-width: 800px;
   }
@@ -263,7 +354,7 @@ import Testimonial from '../components/Testimonial.astro';
     font-weight: 600;
     color: var(--color-text-muted);
   }
-  
+
   .credibility-bar span {
     padding: var(--spacing-2) var(--spacing-4);
     background: var(--color-bg-surface);
@@ -282,7 +373,7 @@ import Testimonial from '../components/Testimonial.astro';
     max-width: 500px;
     margin: 0 auto;
   }
-  
+
   @media (min-width: 480px) {
     .newsletter-form {
       flex-direction: row;
