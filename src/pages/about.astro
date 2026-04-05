@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout 
+  title="About Samartya Apps — Our Mission & Team" 
+  description="Samartya Apps builds evidence-based language and reading tools for children with disabilities. Learn about our mission, team, and the story behind FreeSpeech and Dyslexia Reader.">
+
+  <section class="section section-light pt-24 pb-8">
+    <div class="container max-w-m mx-auto text-center">
+      <h1 class="mb-4">Technology should unlock potential, not gatekeep it.</h1>
+      <div class="hero-quote">
+        <p>Samartya Apps exists because millions of children around the world have thoughts, ideas, and stories inside them — but struggle to express them through spoken or written language. Some have autism. Some have dyslexia. Some are learning English for the first time. All of them deserve tools that meet them where they are.</p>
+        <p>We build apps that make language visible, reading accessible, and learning achievable. Our tools are used by speech-language pathologists, special educators, reading specialists, and families in the United States, India, and beyond.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container max-w-m mx-auto text-center">
+      <div class="content-box">
+        <h2 class="mb-6">Our Story</h2>
+        <div class="text-left">
+          <p>FreeSpeech and Dyslexia Reader were originally developed by Avaz Inc., an Indian assistive technology company founded by Ajit Narayanan. Ajit's work on visual language systems and affordable communication technology earned recognition from TED, MIT Technology Review, and the President of India.</p>
+          <p>Both products were acquired by Samartya Apps. We continue to develop and support them with the same mission-driven focus — making evidence-based language and reading tools available and affordable for every child who needs them.</p>
+          <p class="highlight-text mt-6 text-center">
+            The name <strong>"Samartya"</strong> comes from Sanskrit, meaning <strong>"capability"</strong> or <strong>"empowerment."</strong> It reflects our core belief: every child has the capability to learn, communicate, and grow — they just need the right support.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light text-center">
+    <div class="container">
+      <h2 class="mb-12">Our Team</h2>
+      <div class="grid-2 max-w-m mx-auto">
+        <Card title="Ajit Narayanan">
+          <strong>Founder</strong>
+          <p>Ajit founded Samartya Apps to continue developing the visual language systems he originated. He is passionate about making special education accessible to every child.</p>
+        </Card>
+        <Card title="Engineering & Product">
+          <strong>The Team</strong>
+          <p>A dedicated team of engineers and designers actively improving and supporting FreeSpeech and Dyslexia Reader across platforms.</p>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt text-center">
+    <div class="container max-w-m mx-auto">
+      <h2 class="mb-12">Our Partners</h2>
+      <div class="card basic-card partner-card">
+        <div class="mb-4 text-2xl font-bold">[MDA Logo Placeholder]</div>
+        <h3>Madras Dyslexia Association</h3>
+        <p>Our partner in developing Dyslexia Reader. MDA brings 30+ years of clinical dyslexia expertise.</p>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .pt-24 { padding-top: var(--spacing-24); }
+  .pb-8 { padding-bottom: var(--spacing-8); }
+  .mb-12 { margin-bottom: var(--spacing-12); }
+  .mb-6 { margin-bottom: var(--spacing-6); }
+  .mb-4 { margin-bottom: var(--spacing-4); }
+  .mt-6 { margin-top: var(--spacing-6); }
+
+  .max-w-m { max-width: 800px; }
+  .mx-auto { margin-left: auto; margin-right: auto; }
+  
+  .text-left { text-align: left; }
+  .text-center { text-align: center; }
+
+  .hero-quote {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    text-align: left;
+    margin-top: var(--spacing-8);
+  }
+  
+  .hero-quote p {
+    margin-bottom: var(--spacing-6);
+  }
+
+  .content-box {
+    background: var(--color-bg-surface);
+    padding: var(--spacing-12);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+  }
+
+  .highlight-text {
+    font-size: 1.25rem;
+    color: var(--color-primary-dark);
+    font-style: italic;
+    background: var(--color-primary-light);
+    padding: var(--spacing-6);
+    border-radius: var(--border-radius-md);
+  }
+  
+  .highlight-text strong {
+    font-weight: 700;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+  
+  @media (min-width: 600px) {
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  }
+  
+  .partner-card {
+    display: inline-flex;
+    text-align: center;
+    max-width: 400px;
+    align-items: center;
+  }
+</style>

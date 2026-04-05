@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout 
+  title="Research & Evidence — Samartya Apps | FreeSpeech & Dyslexia Reader" 
+  description="The research behind FreeSpeech and Dyslexia Reader. TED talk, MIT TR35 recognition, Madras Dyslexia Association partnership, and evidence-based methodology.">
+
+  <section class="section section-light pt-24 text-center">
+    <div class="container max-w-m mx-auto">
+      <h1 class="mb-4">Research & Evidence</h1>
+      <p class="hero-subtitle mb-12">The science and clinical methodology behind FreeSpeech and Dyslexia Reader.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt text-center">
+    <div class="container">
+      <h2 class="mb-8">A word game to communicate in any language.</h2>
+      
+      <div class="video-embed-container max-w-m mx-auto">
+        <!-- Placeholder for TED talk embed -->
+        <div class="video-placeholder rounded">
+          <div class="box">TED Talk Embed: Ajit Narayanan</div>
+        </div>
+      </div>
+      
+      <div class="max-w-m mx-auto text-left mt-8">
+        <p>In this talk, Ajit Narayanan describes the visual language system behind FreeSpeech — how representing grammar as spatial relationships rather than linear sequences allows children with autism to construct complex sentences that would be difficult to produce in traditional speech or writing. The talk explores the deeper question of whether FreeSpeech's approach could be used to teach language to anyone, not just children with disabilities.</p>
+        <p>The talk has been viewed over 1 million times and has been translated into dozens of languages.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container max-w-m mx-auto box-content text-left">
+      <h2 class="mb-8 text-center">The Science Behind FreeSpeech</h2>
+      
+      <div class="content-block">
+        <p><strong>How FreeSpeech represents grammar visually:</strong></p>
+        <p>Traditional language instruction teaches grammar as rules: "Add -s to the verb when the subject is he, she, or it." For many children — especially those with autism or language disorders — these abstract rules are difficult to internalize.</p>
+        <p>FreeSpeech takes a fundamentally different approach. Instead of rules, it uses a spatial map. Words are represented as pictures. Grammatical relationships (tense, number, person, sentence type) are represented as visual properties and positions on a grid. When a child changes one element — swapping "I" for "he," or moving the tense marker from present to past — the entire sentence transforms visibly. The child sees the cause and effect of grammatical structure, not as a rule to memorize, but as a pattern they can observe and manipulate.</p>
+        <p>This approach is informed by research on how the brain processes language. Neuroscience research from the late 1990s showed that children acquiring a first language use different brain regions than adults acquiring a second language. FreeSpeech's visual system appears to engage the same pathways used in first-language acquisition — making it potentially easier for children to internalize grammar without the overhead of translating through another language.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt text-center">
+    <div class="container max-w-m mx-auto">
+      <h2 class="mb-8">Awards & Recognition</h2>
+      <ul class="award-list text-left">
+        <li><strong>MIT Technology Review TR35:</strong> Ajit Narayanan was named to the TR35 list of top innovators under 35, alongside founders of companies like Groupon.</li>
+        <li><strong>National Award for Empowerment of Persons with Disabilities:</strong> Awarded by the President of India (2010) for Narayanan's work on speech-generating technology.</li>
+        <li><strong>Apple Best New App:</strong> FreeSpeech was featured by Apple as one of the best new apps on the App Store.</li>
+        <li><strong>TED Talk:</strong> Over 1 million views. Translated into dozens of languages.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-primary">
+    <div class="container max-w-m mx-auto text-center">
+      <h2 class="mb-4">The Madras Dyslexia Association Partnership</h2>
+      <div class="mb-6 text-2xl font-bold">[MDA Logo Placeholder]</div>
+      <div class="text-left">
+        <p class="mb-4">Dyslexia Reader was co-developed with the Madras Dyslexia Association (MDA), a non-profit organization founded in 1992 in Chennai, India. MDA has spent over 30 years developing and refining evidence-based strategies for helping children with dyslexia.</p>
+        <p class="mb-4">MDA's approach encompasses assessment, remediation, teacher training, and the development of teaching aids. Their work reaches thousands of children across India through school resource rooms, learning centers, and teacher training programs. The reading strategies embedded in Dyslexia Reader — including onset/rime, syllabification, and structured multi-sensory supports — come directly from MDA's clinical practice.</p>
+        <p class="mb-8">MDA is also collaborating with IIT Madras on AI-powered dyslexia screening tools, and offers a free online course (e-Shikshanam) on remedial instruction through the NPTEL platform.</p>
+      </div>
+      <Button href="https://mdachennai.com/" variant="secondary">Visit Madras Dyslexia Association →</Button>
+    </div>
+  </section>
+
+  <section class="section section-light text-center">
+    <div class="container max-w-m mx-auto">
+      <h2 class="mb-6">Published Research & Resources</h2>
+      <p class="mb-6 text-left text-muted italic">Building the evidence base for assistive technology is an ongoing priority. Currently, clinical evaluations and whitepapers are in progress and will be available here.</p>
+      <p class="mb-8 text-left">We are actively building our published evidence base. If you are a researcher interested in studying outcomes with FreeSpeech or Dyslexia Reader, we welcome collaboration.</p>
+      <Button href="/contact" variant="outline">Contact us to collaborate →</Button>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .pt-24 { padding-top: var(--spacing-24); }
+  .mb-12 { margin-bottom: var(--spacing-12); }
+  .mb-8 { margin-bottom: var(--spacing-8); }
+  .mb-6 { margin-bottom: var(--spacing-6); }
+  .mb-4 { margin-bottom: var(--spacing-4); }
+  .mt-8 { margin-top: var(--spacing-8); }
+  
+  .text-left { text-align: left; }
+  .text-muted { color: var(--color-text-muted); }
+  .italic { font-style: italic; }
+  
+  .max-w-m { max-width: 800px; }
+  .mx-auto { margin-left: auto; margin-right: auto; }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+  }
+
+  .video-placeholder {
+    aspect-ratio: 16/9;
+    background: var(--color-border);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: var(--color-text-muted);
+    font-weight: 600;
+  }
+
+  .box {
+    border: 2px dashed rgba(0, 0, 0, 0.2);
+    padding: var(--spacing-8);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+  }
+
+  .content-block p {
+    margin-bottom: var(--spacing-4);
+  }
+
+  .award-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+
+  .award-list li {
+    background: var(--color-bg-surface);
+    padding: var(--spacing-6);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+  }
+</style>

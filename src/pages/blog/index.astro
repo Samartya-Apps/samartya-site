@@ -1,0 +1,281 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Button from '../../components/Button.astro';
+import Card from '../../components/Card.astro';
+
+// Placeholder blog data to demonstrate the layout described in the sitemap
+const MOCK_POSTS = [
+  {
+    title: "5 Ways SLPs Can Use FreeSpeech for Grammar Intervention",
+    excerpt: "Discover practical strategies to integrate visual grammar tools into your daily therapy sessions, helping neurodiverse students understand complex sentence structures.",
+    category: "Therapy Tips",
+    date: "April 15, 2026",
+    image: "/img/placeholder.svg" // We'll use a CSS placeholder here since it's just a mock
+  },
+  {
+    title: "How to Set Up Dyslexia Reader for Your Classroom",
+    excerpt: "A step-by-step guide for teachers on digitizing existing reading materials and assigning them to students using our accessible reading platform.",
+    category: "Reading Strategies",
+    date: "March 28, 2026",
+    image: "/img/placeholder.svg"
+  },
+  {
+    title: "Why We're Bringing Dyslexia Reader to the Web",
+    excerpt: "No app install required. Learn about our upcoming web release and what it means for school districts looking for low-friction assistive reading tools.",
+    category: "Product Updates",
+    date: "March 10, 2026",
+    image: "/img/placeholder.svg"
+  },
+  {
+    title: "The Grammar Gap: Why Visual Language Works",
+    excerpt: "An overview of the neuroscience behind spatial language representations and how they engage first-language acquisition pathways in the brain.",
+    category: "Research & Evidence",
+    date: "February 22, 2026",
+    image: "/img/placeholder.svg"
+  }
+];
+---
+
+<Layout 
+  title="Samartya Apps Blog — Tips, Research & Stories for Special Educators" 
+  description="Practical tips for SLPs, special educators, and parents. Research insights, product updates, and stories from the community.">
+
+  <section class="section section-light pt-24 pb-8">
+    <div class="container text-center max-w-m mx-auto">
+      <h1 class="mb-4">From the Samartya Blog</h1>
+      <p class="hero-subtitle mb-8">Tips for therapists, reading strategies for teachers, product updates, and research insights.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container blog-container">
+      
+      <!-- Main Content Area: Blog Posts -->
+      <main class="blog-main">
+        <div class="posts-grid">
+          {MOCK_POSTS.map(post => (
+            <div class="post-card card basic-card">
+              <div class="post-image-placeholder">
+                <span class="img-text">Featured Image</span>
+              </div>
+              <div class="post-content">
+                <div class="post-meta">
+                  <span class="post-category">{post.category}</span>
+                  <span class="post-date">{post.date}</span>
+                </div>
+                <h2 class="post-title"><a href="#">{post.title}</a></h2>
+                <p class="post-excerpt">{post.excerpt}</p>
+                <a href="#" class="read-more">Read full article →</a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </main>
+
+      <!-- Sidebar Area -->
+      <aside class="blog-sidebar">
+        <div class="sidebar-widget search-widget">
+          <h3>Search</h3>
+          <form class="search-form">
+            <input type="text" placeholder="Search articles..." class="input-field" />
+            <Button variant="primary">Go</Button>
+          </form>
+        </div>
+
+        <div class="sidebar-widget categories-widget">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="#">Therapy Tips</a></li>
+            <li><a href="#">Reading Strategies</a></li>
+            <li><a href="#">Product Updates</a></li>
+            <li><a href="#">Research & Evidence</a></li>
+            <li><a href="#">Success Stories</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget newsletter-widget text-center">
+          <h3>Stay in the loop</h3>
+          <p>Get the latest updates delivered to your inbox.</p>
+          <form class="newsletter-sidebar">
+            <input type="email" placeholder="Email address" class="input-field mb-2 w-full" />
+            <Button variant="secondary" class="w-full">Subscribe</Button>
+          </form>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .pt-24 { padding-top: var(--spacing-24); }
+  .pb-8 { padding-bottom: var(--spacing-8); }
+  .mb-8 { margin-bottom: var(--spacing-8); }
+  .mb-4 { margin-bottom: var(--spacing-4); }
+  .mb-2 { margin-bottom: var(--spacing-2); }
+  .w-full { width: 100%; display: block; }
+  
+  .max-w-m { max-width: 800px; }
+  .mx-auto { margin-left: auto; margin-right: auto; }
+  .text-center { text-align: center; }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+  }
+
+  .blog-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-12);
+  }
+  
+  @media (min-width: 900px) {
+    .blog-container {
+      grid-template-columns: 2.5fr 1fr;
+    }
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+  
+  @media (min-width: 600px) {
+    .posts-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .post-card {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .post-image-placeholder {
+    height: 200px;
+    background: var(--color-primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary-dark);
+    font-weight: 600;
+  }
+  
+  .post-content {
+    padding: var(--spacing-6);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .post-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-3);
+    color: var(--color-text-muted);
+  }
+  
+  .post-category {
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.75rem;
+  }
+  
+  .post-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-3);
+  }
+  
+  .post-title a {
+    color: inherit;
+  }
+  
+  .post-title a:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+  
+  .post-excerpt {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-4);
+    flex-grow: 1;
+  }
+  
+  .read-more {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  /* Sidebar styling */
+  .blog-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+  }
+
+  .sidebar-widget {
+    background: var(--color-bg-surface);
+    padding: var(--spacing-6);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+  }
+
+  .sidebar-widget h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-4);
+    padding-bottom: var(--spacing-2);
+    border-bottom: 2px solid var(--color-bg-alt);
+  }
+
+  .search-form {
+    display: flex;
+    gap: var(--spacing-2);
+  }
+
+  .input-field {
+    width: 100%;
+    padding: var(--spacing-2) var(--spacing-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    font-family: inherit;
+    font-size: 0.95rem;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
+
+  .categories-widget ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+  
+  .categories-widget a {
+    color: var(--color-text-main);
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .categories-widget a:hover {
+    color: var(--color-primary);
+  }
+
+  .newsletter-widget p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-4);
+  }
+</style>

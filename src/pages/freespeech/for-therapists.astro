@@ -1,0 +1,143 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Button from '../../components/Button.astro';
+import Card from '../../components/Card.astro';
+import Testimonial from '../../components/Testimonial.astro';
+---
+
+<Layout 
+  title="FreeSpeech for SLPs & Therapists — Grammar Therapy App | Samartya Apps" 
+  description="FreeSpeech helps SLPs teach grammar to children with autism and language disorders through visual sentence building. Create challenges, adjust scaffolding, and track progress. Free trial.">
+
+  <Hero 
+    title="A grammar intervention tool that your students will actually want to use."
+    subtitle="FreeSpeech gives SLPs a visual, interactive way to teach sentence structure, tense, word order, and parts of speech — without worksheets, and without frustration. Create therapy challenges in minutes. Watch students build sentences independently."
+    align="left"
+    variant="primary"
+  >
+    <Fragment slot="actions">
+      <Button href="/for-schools/request-trial">Start Your Free Trial →</Button>
+    </Fragment>
+  </Hero>
+
+  <section class="section section-light">
+    <div class="container">
+      <h2 class="text-center mb-12">How Therapists Use FreeSpeech</h2>
+      <div class="grid-3">
+        <Card title="Targeting IEP Grammar Goals">
+          <p>You're working on subject-verb agreement with a 7-year-old with autism. In FreeSpeech, you create a challenge: build sentences using "I," "he," and "she" with the verb "eat." The child drags tiles and immediately sees how "I eat" becomes "he eats" — not by memorizing a rule, but by seeing the pattern in action.</p>
+        </Card>
+        <Card title="Group Therapy Sessions">
+          <p>You're running a small group session focused on past tense. You project FreeSpeech and have students take turns building sentences about yesterday. One student drags the "past" tile and watches "I eat lunch" become "I ate lunch." Visual transformation makes tense concrete.</p>
+        </Card>
+        <Card title="Writing Support">
+          <p>A student is working on descriptive writing. You import a photo of a classroom scene into FreeSpeech and assign it as a writing prompt. The student builds sentences describing the image using picture tiles, and FreeSpeech generates the written sentences.</p>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container max-w-m mx-auto">
+      <h2 class="text-center mb-12">Features That Fit Your Workflow</h2>
+      <ul class="feature-list">
+        <li>
+          <strong>Challenge Sets:</strong> Create custom challenges aligned to specific grammar goals. Assign them to individual students or groups. Students complete challenges independently — you review their work during or after the session.
+        </li>
+        <li>
+          <strong>Scaffolding Controls:</strong> Fine-tune how much support FreeSpeech provides. Full scaffolding provides sentence frames and word-order cues. Reduced scaffolding lets students construct sentences with minimal guidance.
+        </li>
+        <li>
+          <strong>Vocabulary Management:</strong> Control which words are available to the student. Limit vocabulary to focus on target words, or expand it as the student progresses.
+        </li>
+        <li>
+          <strong>Progress Visibility:</strong> See what sentences students have built, which challenges they've completed, and where they struggle. Use this data to inform IEP progress notes.
+        </li>
+        <li>
+          <strong>CEU-Worthy:</strong> FreeSpeech has been featured in webinars and conference sessions at ATIA, Closing the Gap, and other AT conferences. Using it in your practice contributes to your professional development.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-light text-center">
+    <div class="container">
+      <h2 class="mb-12">What Other SLPs Say</h2>
+      <div class="grid-1 max-w-m mx-auto mb-12">
+        <Testimonial 
+          quote="I use this with my kids who have language disorders and this app goes very far in helping them expand their language. I love it and it is a very well designed app! Well worth any price!"
+          author="Speech-Language Pathologist"
+          role="App Store Review"
+        />
+      </div>
+      
+      <div class="cta-box background-primary">
+        <h2 class="mb-6">Try FreeSpeech free for 14 days.</h2>
+        <p class="mb-8">Download the app, create your first challenge, and use it in a session this week. No credit card required.</p>
+        <div class="hero-actions justify-center mb-6">
+          <Button href="#">Download on iOS</Button>
+          <Button href="#">Download on Android</Button>
+        </div>
+        <p>Need a longer evaluation period for your school or district? <a href="/for-schools/request-trial">Request an institutional trial →</a></p>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .mb-12 { margin-bottom: var(--spacing-12); }
+  .mb-8 { margin-bottom: var(--spacing-8); }
+  .mb-6 { margin-bottom: var(--spacing-6); }
+  
+  .max-w-m { max-width: 800px; }
+  .mx-auto { margin-left: auto; margin-right: auto; }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+  
+  @media (min-width: 768px) {
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .grid-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+
+  .feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+  }
+
+  .feature-list li {
+    background: var(--color-bg-surface);
+    padding: var(--spacing-6);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+  }
+
+  .feature-list strong {
+    color: var(--color-primary-dark);
+    display: block;
+    margin-bottom: var(--spacing-2);
+    font-size: 1.1rem;
+  }
+
+  .cta-box {
+    padding: var(--spacing-8);
+    border-radius: var(--border-radius-lg);
+    background: var(--color-primary-light);
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+</style>

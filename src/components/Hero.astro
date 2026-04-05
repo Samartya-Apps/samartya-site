@@ -1,0 +1,91 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  align?: 'left' | 'center';
+  variant?: 'primary' | 'alt' | 'light';
+}
+
+const { title, subtitle, align = 'center', variant = 'light' } = Astro.props;
+---
+
+<section class={`hero hero-${variant} hero-${align}`}>
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">{title}</h1>
+      {subtitle && <p class="hero-subtitle">{subtitle}</p>}
+      <div class="hero-actions">
+        <slot name="actions" />
+      </div>
+    </div>
+    <div class="hero-visual">
+      <slot name="visual" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: var(--spacing-16) 0;
+    overflow: hidden;
+  }
+  
+  .hero-light { background-color: var(--color-bg-base); }
+  .hero-alt { background-color: var(--color-bg-alt); }
+  .hero-primary { background-color: var(--color-primary-light); }
+  
+  .hero .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+  }
+  
+  @media (min-width: 768px) {
+    .hero-left .container {
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    .hero-left .hero-content {
+      flex: 1;
+      text-align: left;
+    }
+    
+    .hero-left .hero-visual {
+      flex: 1;
+    }
+    
+    .hero-center .container {
+      text-align: center;
+      max-width: 800px;
+    }
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-4);
+    color: var(--color-text-main);
+  }
+  
+  @media (min-width: 768px) {
+    .hero-title {
+      font-size: 3.5rem;
+    }
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-8);
+  }
+  
+  .hero-actions {
+    display: flex;
+    gap: var(--spacing-4);
+    flex-wrap: wrap;
+  }
+  
+  .hero-center .hero-actions {
+    justify-content: center;
+  }
+</style>

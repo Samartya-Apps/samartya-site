@@ -1,0 +1,273 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Button from '../../components/Button.astro';
+import Card from '../../components/Card.astro';
+---
+
+<Layout 
+  title="Dyslexia Reader — Accessible Reading App for Children | Samartya Apps" 
+  description="Dyslexia Reader turns any classroom material into an accessible reading experience. Scan a page or upload a PDF. Built with the Madras Dyslexia Association.">
+
+  <Hero 
+    title="Every child can be an independent reader."
+    subtitle="Dyslexia Reader turns any printed page or PDF into an accessible reading experience — with text-to-speech, syllabification, onset/rime, and more. It works with your child's actual classroom materials, not a separate library. Built on 20+ years of dyslexia research by the Madras Dyslexia Association."
+    align="left"
+    variant="alt"
+  >
+    <Fragment slot="actions">
+      <Button href="#">Download Free on iOS</Button>
+      <Button href="#" variant="outline">Download Free on Android</Button>
+      <Button href="#web-waitlist" variant="secondary">Try on Web (Coming Soon)</Button>
+      <p class="text-sm mt-2 font-medium w-full">Free to download. Full 14-day trial. No credit card required.</p>
+    </Fragment>
+    <Fragment slot="visual">
+      <div class="video-placeholder">
+        <div class="box">Screenshot: Student using Dyslexia Reader on a tablet</div>
+      </div>
+    </Fragment>
+  </Hero>
+
+  <section class="section section-light">
+    <div class="container text-center">
+      <h2 class="mb-12">How It Works</h2>
+      
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-content text-left">
+            <h3>Step 1: Bring in your reading material.</h3>
+            <p>Scan a physical page using your device's camera, or upload a PDF. Dyslexia Reader digitizes the text and prepares it for supported reading. No need for special e-books or a proprietary library — use your actual textbooks, worksheets, and assignments.</p>
+          </div>
+          <div class="step-visual">
+             <div class="box placeholder-img">Screenshot: Camera scanning a textbook page</div>
+          </div>
+        </div>
+
+        <div class="step step-reverse">
+          <div class="step-content text-left">
+            <h3>Step 2: Choose your reading mode.</h3>
+            <p>Read independently with on-demand supports, or have the app read aloud to you. Switch between page view (see the whole page), sentence view (one sentence at a time), and word view (one word at a time) to match your comfort level.</p>
+          </div>
+          <div class="step-visual">
+             <div class="box placeholder-img">Screenshot: Reading interface modes</div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-content text-left">
+            <h3>Step 3: Get help when you need it.</h3>
+            <p>Stuck on a word? Tap it for instant support. Dyslexia Reader offers multiple types of help for every word: hear it spoken aloud, see it broken into syllables, explore its onset and rime, find rhyming words, and look up its meaning.</p>
+          </div>
+          <div class="step-visual">
+             <div class="box placeholder-img">Screenshot: Word tapped with support options</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="text-center mb-12">Key Features</h2>
+      <div class="grid-3">
+        <Card title="Text-to-Speech">
+          <p>High-quality voices read the text aloud with synchronized highlighting, so your child can follow along. Adjustable speed lets them read at their own pace.</p>
+        </Card>
+        <Card title="Syllabification">
+          <p>Any word can be broken into syllables with a single tap. This helps children decode unfamiliar words using the same strategies taught in evidence-based reading interventions.</p>
+        </Card>
+        <Card title="Onset & Rime">
+          <p>See how words are built from their onset (beginning sound) and rime (ending pattern). This phonological awareness support is a core strategy recommended by dyslexia specialists.</p>
+        </Card>
+        <Card title="Word Families">
+          <p>Discover related words that share the same rime pattern. "Cat" connects to "bat," "hat," "sat" — building a web of decodable words.</p>
+        </Card>
+        <Card title="Focus Tools">
+          <p>Screen masking highlights a single line, reducing visual clutter. A finger-tracking pencil icon helps maintain focus and supports hand-eye coordination while reading.</p>
+        </Card>
+        <Card title="Distraction-Free Reading">
+          <p>Plain-text mode strips away background images. Colored overlays help readers with Irlen Syndrome. Customizable fonts, sizes, and colors let every child create their ideal reading environment.</p>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light text-center">
+    <div class="container max-w-m mx-auto">
+      <h2 class="mb-6">Built with the Madras Dyslexia Association</h2>
+      <div class="mb-6 text-2xl font-bold text-gray-400">[MDA Logo Placeholder]</div>
+      <p class="mb-4">Dyslexia Reader was co-developed with the Madras Dyslexia Association (MDA), a non-profit organization that has been empowering children with dyslexia since 1992. MDA's reading strategies — refined over 20+ years of hands-on work with thousands of children — are embedded directly into the app.</p>
+      <p class="mb-8">This isn't generic text-to-speech. Every support feature in Dyslexia Reader reflects decades of clinical experience in what actually helps dyslexic children become independent readers.</p>
+      <div class="hero-actions">
+        <Button href="https://mdachennai.com/" variant="outline">Learn more about MDA →</Button>
+      </div>
+    </div>
+  </section>
+
+  <section id="web-waitlist" class="section section-primary text-center">
+    <div class="container max-w-m mx-auto content-card">
+      <h2 class="mb-6">Coming Soon — Dyslexia Reader on the Web</h2>
+      <p class="mb-8">We're bringing Dyslexia Reader to the web. Soon, you'll be able to upload a PDF and experience the full reading support experience from any browser, on any device — no download required. Perfect for classroom evaluations and quick trials.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" required class="input-field" />
+        <Button variant="secondary">Join the Waitlist</Button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section section-light text-center">
+    <div class="container">
+      <h2 class="mb-12">Pricing</h2>
+      <div class="pricing-table-container">
+        <table class="pricing-table max-w-m mx-auto">
+          <thead>
+            <tr>
+              <th>Plan</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monthly</td>
+              <td>$9.99/month</td>
+            </tr>
+            <tr>
+              <td>Annual</td>
+              <td>$99.99/year</td>
+            </tr>
+            <tr>
+              <td>Lifetime (one-time purchase)</td>
+              <td>$149.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-8 mb-4"><strong>For Schools:</strong> Volume Purchase Program (VPP) pricing with 50% off for 20+ licenses.</p>
+      <Button href="/for-schools/request-trial" variant="outline">Request a school quote →</Button>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .mb-12 { margin-bottom: var(--spacing-12); }
+  .mb-8 { margin-bottom: var(--spacing-8); }
+  .mb-6 { margin-bottom: var(--spacing-6); }
+  .mb-4 { margin-bottom: var(--spacing-4); }
+  .mt-2 { margin-top: var(--spacing-2); }
+  .mt-8 { margin-top: var(--spacing-8); }
+  
+  .text-left { text-align: left; }
+  .text-sm { font-size: 0.875rem; }
+  .font-medium { font-weight: 500; }
+  .w-full { width: 100%; }
+  
+  .max-w-m { max-width: 800px; }
+  .mx-auto { margin-left: auto; margin-right: auto; }
+
+  .video-placeholder {
+    aspect-ratio: 4/3;
+    background: var(--color-border);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: var(--color-text-muted);
+    font-weight: 600;
+  }
+
+  .box {
+    border: 2px dashed rgba(0, 0, 0, 0.2);
+    padding: var(--spacing-8);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+  }
+
+  .steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+  }
+  
+  .step {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .step { flex-direction: row; }
+    .step-reverse { flex-direction: row-reverse; }
+    .step-content, .step-visual { flex: 1; }
+  }
+
+  .placeholder-img {
+    aspect-ratio: 16/9;
+    background: var(--color-bg-surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-lg);
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+  
+  @media (min-width: 768px) {
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .content-card {
+    background: var(--color-bg-surface);
+    padding: var(--spacing-12);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 480px) {
+    .newsletter-form { flex-direction: row; }
+  }
+
+  .input-field {
+    flex-grow: 1;
+    padding: var(--spacing-3) var(--spacing-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-full);
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition-base);
+  }
+
+  .pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-bg-surface);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+  }
+  
+  .pricing-table th, .pricing-table td {
+    padding: var(--spacing-4);
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .pricing-table th { background: var(--color-bg-alt); font-weight: 600; }
+  .pricing-table tr:last-child td { border-bottom: none; }
+</style>

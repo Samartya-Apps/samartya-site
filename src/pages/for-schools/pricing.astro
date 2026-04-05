@@ -1,0 +1,183 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Button from '../../components/Button.astro';
+import Card from '../../components/Card.astro';
+---
+
+<Layout 
+  title="Pricing & Licensing — Samartya Apps for Schools" 
+  description="Volume pricing, subscription, and one-time purchase options for FreeSpeech and Dyslexia Reader. Contact us for district quotes.">
+
+  <section class="section section-light pt-24 text-center">
+    <div class="container max-w-m mx-auto">
+      <h1 class="mb-4">Pricing for Schools & Institutions</h1>
+      <p class="hero-subtitle mb-12">Affordable licensing options designed to fit school and district budgets.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="grid-2">
+        
+        <!-- FreeSpeech Pricing -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h2>FreeSpeech</h2>
+          </div>
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Option</th>
+                <th>Price</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monthly subscription</td>
+                <td>$9.99/user/month</td>
+                <td>Cancel anytime</td>
+              </tr>
+              <tr>
+                <td>Annual subscription</td>
+                <td>$99.99/user/year</td>
+                <td>Best value for individual licenses</td>
+              </tr>
+              <tr>
+                <td>Lifetime (one-time)</td>
+                <td>$149.99</td>
+                <td>One-time purchase, permanent access</td>
+              </tr>
+              <tr class="highlight-row">
+                <td>VPP Lifetime (20+ licenses)</td>
+                <td>$74.99</td>
+                <td>Apple Volume Purchase Program</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Dyslexia Reader Pricing -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h2>Dyslexia Reader</h2>
+          </div>
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Option</th>
+                <th>Price</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monthly subscription</td>
+                <td>$9.99/user/month</td>
+                <td>Cancel anytime</td>
+              </tr>
+              <tr>
+                <td>Annual subscription</td>
+                <td>$99.99/user/year</td>
+                <td>Best value for individual licenses</td>
+              </tr>
+              <tr>
+                <td>Lifetime (one-time)</td>
+                <td>$149.99</td>
+                <td>One-time purchase, permanent access</td>
+              </tr>
+              <tr class="highlight-row">
+                <td>VPP Lifetime (20+ licenses)</td>
+                <td>$74.99</td>
+                <td>Apple Volume Purchase Program</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section-primary text-center">
+    <div class="container max-w-m mx-auto cta-box text-left">
+      <h2 class="mb-4">Need a quote for your district?</h2>
+      <p class="mb-8">Contact us with the number of licenses you need and we'll provide a formal quote compatible with your purchasing process.</p>
+      <div class="hero-actions">
+        <Button href="/contact" variant="secondary">Request a Quote →</Button>
+        <span style="display:inline-block; margin-top: 10px; margin-left: 20px;">Or email: <strong>schools@samartya.com</strong></span>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .pt-24 { padding-top: var(--spacing-24); }
+  .mb-12 { margin-bottom: var(--spacing-12); }
+  .mb-8 { margin-bottom: var(--spacing-8); }
+  .mb-4 { margin-bottom: var(--spacing-4); }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+  }
+  
+  .max-w-m { max-width: 800px; }
+  .mx-auto { margin-left: auto; margin-right: auto; }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-12);
+  }
+  
+  @media (min-width: 768px) {
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .pricing-card {
+    background: var(--color-bg-surface);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+  }
+
+  .pricing-header {
+    background: var(--color-bg-alt);
+    padding: var(--spacing-6) var(--spacing-8);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .pricing-table th, .pricing-table td {
+    padding: var(--spacing-4) var(--spacing-6);
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .pricing-table th { 
+    font-size: 0.875rem; 
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+  
+  .pricing-table tr:last-child td { border-bottom: none; }
+  
+  .highlight-row {
+    background-color: var(--color-primary-light);
+    font-weight: 600;
+  }
+
+  .cta-box {
+    background: var(--color-bg-surface);
+    padding: var(--spacing-12);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+</style>

@@ -1,0 +1,299 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Button from '../../components/Button.astro';
+import Card from '../../components/Card.astro';
+---
+
+<Layout 
+  title="FreeSpeech — Teach Grammar Through Pictures | Samartya Apps" 
+  description="FreeSpeech helps children with autism and language disorders learn English grammar by dragging and dropping pictures. Used by SLPs, special educators, and families. iOS & Android.">
+
+  <Hero 
+    title="Grammar you can see, touch, and hear."
+    subtitle="FreeSpeech is the only app that teaches grammar through pictures. Children build sentences by arranging visual tiles — and FreeSpeech converts them into grammatically correct English, spoken aloud. No memorizing rules. No worksheets. Just language, made visual."
+    align="left"
+    variant="primary"
+  >
+    <Fragment slot="actions">
+      <Button href="#">Download Free on iOS</Button>
+      <Button href="#" variant="outline">Download Free on Android</Button>
+      <p class="text-sm mt-2 font-medium">Free to download. Full 14-day trial. No credit card required.</p>
+    </Fragment>
+    <Fragment slot="visual">
+      <div class="video-placeholder">
+        <div class="box">Screenshot/Animation: Dragging picture tile into grid</div>
+      </div>
+    </Fragment>
+  </Hero>
+
+  <section class="section section-light">
+    <div class="container text-center">
+      <h2 class="mb-12">Build a sentence in three steps.</h2>
+      
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-content text-left">
+            <h3>Step 1: Choose pictures.</h3>
+            <p>Tap or drag picture tiles representing words, actions, and concepts onto the grid. FreeSpeech includes a rich vocabulary of symbols covering nouns, verbs, adjectives, prepositions, and abstract concepts like tense and quantity.</p>
+          </div>
+          <div class="step-visual">
+             <div class="box placeholder-img">Screenshot: Picture grid</div>
+          </div>
+        </div>
+
+        <div class="step step-reverse">
+          <div class="step-content text-left">
+            <h3>Step 2: Arrange them.</h3>
+            <p>Place tiles in any order — FreeSpeech understands the relationships between them, not just their sequence. Change a single tile (like swapping "I" for "he") and watch the entire sentence adjust ("eat" becomes "eats").</p>
+          </div>
+          <div class="step-visual">
+             <div class="box placeholder-img">Screenshot: Tiles rearranged</div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-content text-left">
+            <h3>Step 3: Hear the sentence.</h3>
+            <p>FreeSpeech converts your picture arrangement into a grammatically correct English sentence and speaks it aloud. The sentence appears on screen, connecting the visual representation to written and spoken language.</p>
+          </div>
+          <div class="step-visual">
+             <div class="box placeholder-img">Screenshot: Completed sentence</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="text-center mb-12">Designed for therapy. Built for learning.</h2>
+      <div class="grid-3">
+        <Card title="Therapy-Ready Challenges">
+          <p>Create custom challenge sets for your students. Assign sentence-building tasks aligned to IEP goals. Students complete challenges independently and you review their work.</p>
+        </Card>
+        <Card title="Adjustable Scaffolding">
+          <p>Control how much grammatical support FreeSpeech provides. Start with full scaffolding for beginners and gradually reduce it as students build independence.</p>
+        </Card>
+        <Card title="Vocabulary Levels">
+          <p>Adjust the available vocabulary from basic (everyday nouns and verbs) to advanced (abstract concepts, complex tenses, prepositions). Match the vocabulary to each student.</p>
+        </Card>
+        <Card title="Writing Support">
+          <p>FreeSpeech includes picture-based writing supports. Teachers can import any image and assign it as a writing prompt. Students build sentences describing the image.</p>
+        </Card>
+        <Card title="Multi-Language Support">
+          <p>FreeSpeech supports sentence generation in English, Spanish, and Arabic, with the same visual grammar system. The picture-based approach transcends specific languages.</p>
+        </Card>
+        <Card title="Works Offline">
+          <p>No internet connection required after download. Use FreeSpeech anywhere — in a therapy room, classroom, or at home.</p>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <h2 class="text-center mb-12">For anyone learning the structure of language.</h2>
+      <div class="grid-2">
+        <Card title="Children with Autism & Language Disorders">
+          <p>Many children with autism can learn individual words but struggle with word order, grammar, and abstraction. FreeSpeech makes these invisible structures visible. By representing grammar spatially rather than linearly, it aligns with how many neurodiverse learners process information.</p>
+        </Card>
+        <Card title="Children Who Are Deaf or Hard of Hearing">
+          <p>American Sign Language has a very different grammatical structure from English. FreeSpeech helps Deaf students learn English literacy by representing grammar visually, without requiring them to filter it through ASL first.</p>
+        </Card>
+        <Card title="English Language Learners (ESL/ELL)">
+          <p>FreeSpeech's picture-based system is language-independent at its core. Students can explore how English grammar works without relying on their first language as a bridge.</p>
+        </Card>
+        <Card title="Speech-Language Pathologists">
+          <p>FreeSpeech is a therapy tool, not just a learning app. Create assignments, adjust difficulty, and track progress. It fits naturally into grammar intervention sessions and IEP goal tracking.</p>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt text-center">
+    <div class="container max-w-m mx-auto">
+      <h2 class="mb-6">From a TED stage to your child's hands.</h2>
+      <p class="mb-4">FreeSpeech is based on original research into how the brain processes language. Its creator, Ajit Narayanan, developed a visual representation system that maps the deep structure of grammar — not just vocabulary — onto pictures.</p>
+      <p class="mb-8">The technology was the subject of a TED talk that has been viewed over 1 million times, and has been recognized by the MIT Technology Review and the President of India.</p>
+      <div class="hero-actions">
+        <Button href="/research" >Read the research →</Button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light text-center">
+    <div class="container">
+      <h2 class="mb-12">Free to try. Affordable to keep.</h2>
+      <div class="pricing-table-container">
+        <table class="pricing-table max-w-m mx-auto">
+          <thead>
+            <tr>
+              <th>Plan</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monthly</td>
+              <td>$9.99/month</td>
+            </tr>
+            <tr>
+              <td>6 Months</td>
+              <td>$59.99</td>
+            </tr>
+            <tr>
+              <td>Annual</td>
+              <td>$99.99/year</td>
+            </tr>
+            <tr>
+              <td>Lifetime (one-time purchase)</td>
+              <td>$149.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-8 mb-4"><strong>For Schools:</strong> FreeSpeech Lifetime Edition is available through Apple's VPP with a 50% discount for purchases of 20 or more licenses.</p>
+      <Button href="/for-schools/request-trial" variant="outline">Request a school quote →</Button>
+    </div>
+  </section>
+
+  <section class="section section-primary text-center">
+    <div class="container">
+      <h2 class="mb-6">Start building sentences today.</h2>
+      <div class="hero-actions mb-4">
+        <!-- Badges omitted per placeholder preference, use Buttons for now -->
+        <Button href="#">Download on App Store</Button>
+        <Button href="#">Get it on Google Play</Button>
+      </div>
+      <p class="font-medium">Free to download. Full 14-day trial. No credit card required.</p>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .mb-12 { margin-bottom: var(--spacing-12); }
+  .mb-8 { margin-bottom: var(--spacing-8); }
+  .mb-6 { margin-bottom: var(--spacing-6); }
+  .mb-4 { margin-bottom: var(--spacing-4); }
+  .mt-2 { margin-top: var(--spacing-2); }
+  .mt-8 { margin-top: var(--spacing-8); }
+  
+  .text-left { text-align: left; }
+  .text-sm { font-size: 0.875rem; }
+  .font-medium { font-weight: 500; }
+  .w-full { width: 100%; }
+  
+  .max-w-m {
+    max-width: 800px;
+  }
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .video-placeholder {
+    aspect-ratio: 1;
+    background: var(--color-border);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: var(--color-text-muted);
+    font-weight: 600;
+  }
+
+  .box {
+    border: 2px dashed rgba(0, 0, 0, 0.2);
+    padding: var(--spacing-8);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+  }
+
+  .steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+  }
+  
+  .step {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .step {
+      flex-direction: row;
+    }
+    
+    .step-reverse {
+      flex-direction: row-reverse;
+    }
+    
+    .step-content, .step-visual {
+      flex: 1;
+    }
+  }
+
+  .placeholder-img {
+    aspect-ratio: 16/9;
+    background: var(--color-bg-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-lg);
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+  
+  @media (min-width: 768px) {
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+  
+  @media (min-width: 768px) {
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-bg-surface);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+  }
+  
+  .pricing-table th, .pricing-table td {
+    padding: var(--spacing-4);
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .pricing-table th {
+    background: var(--color-bg-alt);
+    font-weight: 600;
+  }
+  
+  .pricing-table tr:last-child td {
+    border-bottom: none;
+  }
+</style>

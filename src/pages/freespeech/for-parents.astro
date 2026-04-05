@@ -1,0 +1,115 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Button from '../../components/Button.astro';
+import Card from '../../components/Card.astro';
+---
+
+<Layout 
+  title="FreeSpeech for Parents — Help Your Child Learn Grammar | Samartya Apps" 
+  description="FreeSpeech helps children with autism and language disorders learn grammar at home using pictures. Easy to use. Recommended by speech therapists. Free to try.">
+
+  <Hero 
+    title="Help your child build sentences — and confidence."
+    subtitle="If your child struggles with putting words together, FreeSpeech can help. It turns grammar into a visual, hands-on experience that children enjoy — not a chore they dread. Used by families and recommended by speech therapists worldwide."
+    align="left"
+    variant="primary"
+  >
+    <Fragment slot="actions">
+      <Button href="#">Download Free →</Button>
+    </Fragment>
+  </Hero>
+
+  <section class="section section-light">
+    <div class="container max-w-m mx-auto">
+      <h2 class="text-center mb-12">What You'll See</h2>
+      <div class="grid-2">
+        <div class="comparison-card">
+          <h3 class="comparison-title before">Before FreeSpeech</h3>
+          <p>Your child knows words but can't combine them. "Want... cookie... please" instead of "I want a cookie, please." Grammar feels like an invisible wall.</p>
+        </div>
+        <div class="comparison-card">
+          <h3 class="comparison-title after">With FreeSpeech</h3>
+          <p>Your child drags pictures onto a grid and watches a real sentence appear. They start to see patterns — how "I eat" changes to "I ate," how "he" makes the verb different from "she." The wall starts to come down, one sentence at a time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="text-center mb-12">How to Use It at Home</h2>
+      <div class="grid-2">
+        <Card title="Start simple.">
+          <p>Open FreeSpeech and let your child explore. Drag a few pictures and see what happens. There's no wrong way to start.</p>
+        </Card>
+        <Card title="Use the built-in challenges.">
+          <p>FreeSpeech comes with pre-made challenge sets at different levels. Your child can work through them independently, or you can sit together and build sentences as a shared activity.</p>
+        </Card>
+        <Card title="Coordinate with your child's therapist.">
+          <p>If your child works with an SLP, ask them to create FreeSpeech challenges that reinforce what they're working on in therapy. The app bridges the gap between therapy sessions and home practice.</p>
+        </Card>
+        <Card title="Celebrate every sentence.">
+          <p>Every sentence your child builds is a victory. FreeSpeech speaks it aloud — and that moment of hearing their own thought expressed in words is powerful.</p>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light text-center">
+    <div class="container">
+      <h2 class="mb-6">Pricing & Download</h2>
+      <p class="mb-8">Free to download and try for 14 days. Plans start at $9.99/month.</p>
+      <div class="hero-actions justify-center">
+        <Button href="#">Download on iOS</Button>
+        <Button href="#" variant="outline">Download on Android</Button>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .mb-12 { margin-bottom: var(--spacing-12); }
+  .mb-8 { margin-bottom: var(--spacing-8); }
+  .mb-6 { margin-bottom: var(--spacing-6); }
+  
+  .max-w-m { max-width: 800px; }
+  .mx-auto { margin-left: auto; margin-right: auto; }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+  
+  @media (min-width: 768px) {
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .comparison-card {
+    background: var(--color-bg-surface);
+    padding: var(--spacing-8);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+  }
+
+  .comparison-title {
+    margin-bottom: var(--spacing-4);
+    padding-bottom: var(--spacing-4);
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .comparison-title.before {
+    color: var(--color-text-muted);
+  }
+  
+  .comparison-title.after {
+    color: var(--color-primary-dark);
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+</style>
