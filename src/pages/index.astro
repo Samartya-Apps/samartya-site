@@ -23,10 +23,11 @@ import Testimonial from "../components/Testimonial.astro";
       </Button>
     </Fragment>
     <Fragment slot="visual">
-      <div class="video-placeholder">
-        <!-- Placeholder for background video/hero image as specified by user -->
-        <div class="box">Child using app with therapist</div>
-      </div>
+      <img
+        src="/img/boy-with-ipad.png"
+        alt="A child happily using a Samartya learning app on an iPad"
+        class="hero-image"
+      />
     </Fragment>
   </Hero>
 
@@ -318,24 +319,22 @@ import Testimonial from "../components/Testimonial.astro";
     margin-right: auto;
   }
 
-  .video-placeholder {
-    aspect-ratio: 16/9;
-    background: var(--color-border);
-    border-radius: var(--border-radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .hero-image {
     width: 100%;
-    color: var(--color-text-muted);
-    font-weight: 600;
+    height: auto;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    display: block;
     max-width: 800px;
     margin: 0 auto;
+    transition: var(--transition-base);
   }
 
-  .box {
-    border: 2px dashed rgba(0, 0, 0, 0.2);
-    padding: var(--spacing-8);
-    border-radius: var(--border-radius-md);
+  .hero-image:hover {
+    transform: scale(1.02);
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   .video-embed-container {
