@@ -1,15 +1,15 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Hero from '../../components/Hero.astro';
-import Button from '../../components/Button.astro';
-import Card from '../../components/Card.astro';
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import Button from "../../components/Button.astro";
+import Card from "../../components/Card.astro";
 ---
 
-<Layout 
-  title="Dyslexia Reader — Accessible Reading App for Children | Samartya Apps" 
-  description="Dyslexia Reader turns any classroom material into an accessible reading experience. Scan a page or upload a PDF. Built with the Madras Dyslexia Association.">
-
-  <Hero 
+<Layout
+  title="Dyslexia Reader — Accessible Reading App for Children | Samartya Apps"
+  description="Dyslexia Reader turns any classroom material into an accessible reading experience. Scan a page or upload a PDF. Built with the Madras Dyslexia Association."
+>
+  <Hero
     title="Every child can be an independent reader."
     subtitle="Dyslexia Reader turns any printed page or PDF into an accessible reading experience — with text-to-speech, syllabification, onset/rime, and more. It works with your child's actual classroom materials, not a separate library. Built on 20+ years of dyslexia research by the Madras Dyslexia Association."
     align="left"
@@ -18,12 +18,18 @@ import Card from '../../components/Card.astro';
     <Fragment slot="actions">
       <Button href="#">Download Free on iOS</Button>
       <Button href="#" variant="outline">Download Free on Android</Button>
-      <Button href="#web-waitlist" variant="secondary">Try on Web (Coming Soon)</Button>
-      <p class="text-sm mt-2 font-medium w-full">Free to download. Full 14-day trial. No credit card required.</p>
+      <Button href="#web-waitlist" variant="secondary">
+        Try on Web (Coming Soon)
+      </Button>
+      <p class="text-sm mt-2 font-medium w-full">
+        Free to download. Full 14-day trial. No credit card required.
+      </p>
     </Fragment>
     <Fragment slot="visual">
       <div class="video-placeholder">
-        <div class="box">Screenshot: Student using Dyslexia Reader on a tablet</div>
+        <div class="box">
+          Screenshot: Student using Dyslexia Reader on a tablet
+        </div>
       </div>
     </Fragment>
   </Hero>
@@ -31,35 +37,56 @@ import Card from '../../components/Card.astro';
   <section class="section section-light">
     <div class="container text-center">
       <h2 class="mb-12">How It Works</h2>
-      
+
       <div class="steps-container">
         <div class="step">
           <div class="step-content text-left">
             <h3>Step 1: Bring in your reading material.</h3>
-            <p>Scan a physical page using your device's camera, or upload a PDF. Dyslexia Reader digitizes the text and prepares it for supported reading. No need for special e-books or a proprietary library — use your actual textbooks, worksheets, and assignments.</p>
+            <p>
+              Scan a physical page using your device's camera, or upload a PDF.
+              Dyslexia Reader digitizes the text and prepares it for supported
+              reading. No need for special e-books or a proprietary library —
+              use your actual textbooks, worksheets, and assignments.
+            </p>
           </div>
           <div class="step-visual">
-             <div class="box placeholder-img">Screenshot: Camera scanning a textbook page</div>
+            <div class="box placeholder-img">
+              Screenshot: Camera scanning a textbook page
+            </div>
           </div>
         </div>
 
         <div class="step step-reverse">
           <div class="step-content text-left">
             <h3>Step 2: Choose your reading mode.</h3>
-            <p>Read independently with on-demand supports, or have the app read aloud to you. Switch between page view (see the whole page), sentence view (one sentence at a time), and word view (one word at a time) to match your comfort level.</p>
+            <p>
+              Read independently with on-demand supports, or have the app read
+              aloud to you. Switch between page view (see the whole page),
+              sentence view (one sentence at a time), and word view (one word at
+              a time) to match your comfort level.
+            </p>
           </div>
           <div class="step-visual">
-             <div class="box placeholder-img">Screenshot: Reading interface modes</div>
+            <div class="box placeholder-img">
+              Screenshot: Reading interface modes
+            </div>
           </div>
         </div>
 
         <div class="step">
           <div class="step-content text-left">
             <h3>Step 3: Get help when you need it.</h3>
-            <p>Stuck on a word? Tap it for instant support. Dyslexia Reader offers multiple types of help for every word: hear it spoken aloud, see it broken into syllables, explore its onset and rime, find rhyming words, and look up its meaning.</p>
+            <p>
+              Stuck on a word? Tap it for instant support. Dyslexia Reader
+              offers multiple types of help for every word: hear it spoken
+              aloud, see it broken into syllables, explore its onset and rime,
+              find rhyming words, and look up its meaning.
+            </p>
           </div>
           <div class="step-visual">
-             <div class="box placeholder-img">Screenshot: Word tapped with support options</div>
+            <div class="box placeholder-img">
+              Screenshot: Word tapped with support options
+            </div>
           </div>
         </div>
       </div>
@@ -71,22 +98,45 @@ import Card from '../../components/Card.astro';
       <h2 class="text-center mb-12">Key Features</h2>
       <div class="grid-3">
         <Card title="Text-to-Speech">
-          <p>High-quality voices read the text aloud with synchronized highlighting, so your child can follow along. Adjustable speed lets them read at their own pace.</p>
+          <p>
+            High-quality voices read the text aloud with synchronized
+            highlighting, so your child can follow along. Adjustable speed lets
+            them read at their own pace.
+          </p>
         </Card>
         <Card title="Syllabification">
-          <p>Any word can be broken into syllables with a single tap. This helps children decode unfamiliar words using the same strategies taught in evidence-based reading interventions.</p>
+          <p>
+            Any word can be broken into syllables with a single tap. This helps
+            children decode unfamiliar words using the same strategies taught in
+            evidence-based reading interventions.
+          </p>
         </Card>
         <Card title="Onset & Rime">
-          <p>See how words are built from their onset (beginning sound) and rime (ending pattern). This phonological awareness support is a core strategy recommended by dyslexia specialists.</p>
+          <p>
+            See how words are built from their onset (beginning sound) and rime
+            (ending pattern). This phonological awareness support is a core
+            strategy recommended by dyslexia specialists.
+          </p>
         </Card>
         <Card title="Word Families">
-          <p>Discover related words that share the same rime pattern. "Cat" connects to "bat," "hat," "sat" — building a web of decodable words.</p>
+          <p>
+            Discover related words that share the same rime pattern. "Cat"
+            connects to "bat," "hat," "sat" — building a web of decodable words.
+          </p>
         </Card>
         <Card title="Focus Tools">
-          <p>Screen masking highlights a single line, reducing visual clutter. A finger-tracking pencil icon helps maintain focus and supports hand-eye coordination while reading.</p>
+          <p>
+            Screen masking highlights a single line, reducing visual clutter. A
+            finger-tracking pencil icon helps maintain focus and supports
+            hand-eye coordination while reading.
+          </p>
         </Card>
         <Card title="Distraction-Free Reading">
-          <p>Plain-text mode strips away background images. Colored overlays help readers with Irlen Syndrome. Customizable fonts, sizes, and colors let every child create their ideal reading environment.</p>
+          <p>
+            Plain-text mode strips away background images. Colored overlays help
+            readers with Irlen Syndrome. Customizable fonts, sizes, and colors
+            let every child create their ideal reading environment.
+          </p>
         </Card>
       </div>
     </div>
@@ -95,11 +145,28 @@ import Card from '../../components/Card.astro';
   <section class="section section-light text-center">
     <div class="container max-w-m mx-auto">
       <h2 class="mb-6">Built with the Madras Dyslexia Association</h2>
-      <img src="/img/mda-logo.png" alt="Madras Dyslexia Association Logo" class="mb-6" style="max-height: 80px; width: auto; margin: 0 auto;" />
-      <p class="mb-4">Dyslexia Reader was co-developed with the Madras Dyslexia Association (MDA), a non-profit organization that has been empowering children with dyslexia since 1992. MDA's reading strategies — refined over 20+ years of hands-on work with thousands of children — are embedded directly into the app.</p>
-      <p class="mb-8">This isn't generic text-to-speech. Every support feature in Dyslexia Reader reflects decades of clinical experience in what actually helps dyslexic children become independent readers.</p>
+      <img
+        src="/img/mda-logo.png"
+        alt="Madras Dyslexia Association Logo"
+        class="mb-6"
+        style="max-height: 80px; width: auto; margin: 0 auto;"
+      />
+      <p class="mb-4">
+        Dyslexia Reader was co-developed with the Madras Dyslexia Association
+        (MDA), a non-profit organization that has been empowering children with
+        dyslexia since 1992. MDA's reading strategies — refined over 30+ years
+        of hands-on work with thousands of children — are embedded directly into
+        the app.
+      </p>
+      <p class="mb-8">
+        This isn't generic text-to-speech. Every support feature in Dyslexia
+        Reader reflects decades of clinical experience in what actually helps
+        dyslexic children become independent readers.
+      </p>
       <div class="hero-actions">
-        <Button href="https://mdachennai.com/" variant="outline">Learn more about MDA →</Button>
+        <Button href="https://mdachennai.com/" variant="outline"
+          >Learn more about MDA →</Button
+        >
       </div>
     </div>
   </section>
@@ -107,11 +174,37 @@ import Card from '../../components/Card.astro';
   <section id="web-waitlist" class="section section-primary text-center">
     <div class="container max-w-m mx-auto content-card">
       <h2 class="mb-6">Coming Soon — Dyslexia Reader on the Web</h2>
-      <p class="mb-8">We're bringing Dyslexia Reader to the web. Soon, you'll be able to upload a PDF and experience the full reading support experience from any browser, on any device — no download required. Perfect for classroom evaluations and quick trials.</p>
-      <form class="newsletter-form">
-        <input type="email" placeholder="Your email address" required class="input-field" />
-        <Button variant="secondary">Join the Waitlist</Button>
+      <p class="mb-8">
+        We're bringing Dyslexia Reader to the web. Soon, you'll be able to
+        upload a PDF and experience the full reading support experience from any
+        browser, on any device — no download required. Perfect for classroom
+        evaluations and quick trials.
+      </p>
+      <form id="waitlist-form" class="waitlist-form" novalidate>
+        <div class="waitlist-fields">
+          <input
+            id="waitlist-email"
+            type="email"
+            placeholder="Your email address"
+            required
+            class="input-field"
+            autocomplete="email"
+          />
+          <select id="waitlist-role" class="input-field select-field">
+            <option value="">Your role (optional)</option>
+            <option value="teacher">Teacher</option>
+            <option value="slp">Speech-Language Pathologist</option>
+            <option value="parent">Parent / Caregiver</option>
+            <option value="administrator">School Administrator</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <button id="waitlist-submit" type="submit" class="btn btn-secondary"
+          >Notify Me When It's Ready</button
+        >
       </form>
+      <div id="waitlist-feedback" class="form-feedback" aria-live="polite">
+      </div>
     </div>
   </section>
 
@@ -142,28 +235,57 @@ import Card from '../../components/Card.astro';
           </tbody>
         </table>
       </div>
-      <p class="mt-8 mb-4"><strong>For Schools:</strong> Volume Purchase Program (VPP) pricing with 50% off for 20+ licenses.</p>
-      <Button href="/for-schools/request-trial" variant="outline">Request a school quote →</Button>
+      <p class="mt-8 mb-4">
+        <strong>For Schools:</strong> Volume Purchase Program (VPP) pricing with 50%
+        off for 20+ licenses.
+      </p>
+      <Button href="/for-schools/request-trial" variant="outline"
+        >Request a school quote →</Button
+      >
     </div>
   </section>
-
 </Layout>
 
 <style>
-  .mb-12 { margin-bottom: var(--spacing-12); }
-  .mb-8 { margin-bottom: var(--spacing-8); }
-  .mb-6 { margin-bottom: var(--spacing-6); }
-  .mb-4 { margin-bottom: var(--spacing-4); }
-  .mt-2 { margin-top: var(--spacing-2); }
-  .mt-8 { margin-top: var(--spacing-8); }
-  
-  .text-left { text-align: left; }
-  .text-sm { font-size: 0.875rem; }
-  .font-medium { font-weight: 500; }
-  .w-full { width: 100%; }
-  
-  .max-w-m { max-width: 800px; }
-  .mx-auto { margin-left: auto; margin-right: auto; }
+  .mb-12 {
+    margin-bottom: var(--spacing-12);
+  }
+  .mb-8 {
+    margin-bottom: var(--spacing-8);
+  }
+  .mb-6 {
+    margin-bottom: var(--spacing-6);
+  }
+  .mb-4 {
+    margin-bottom: var(--spacing-4);
+  }
+  .mt-2 {
+    margin-top: var(--spacing-2);
+  }
+  .mt-8 {
+    margin-top: var(--spacing-8);
+  }
+
+  .text-left {
+    text-align: left;
+  }
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  .font-medium {
+    font-weight: 500;
+  }
+  .w-full {
+    width: 100%;
+  }
+
+  .max-w-m {
+    max-width: 800px;
+  }
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .video-placeholder {
     aspect-ratio: 4/3;
@@ -189,18 +311,25 @@ import Card from '../../components/Card.astro';
     flex-direction: column;
     gap: var(--spacing-16);
   }
-  
+
   .step {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-8);
     align-items: center;
   }
-  
+
   @media (min-width: 768px) {
-    .step { flex-direction: row; }
-    .step-reverse { flex-direction: row-reverse; }
-    .step-content, .step-visual { flex: 1; }
+    .step {
+      flex-direction: row;
+    }
+    .step-reverse {
+      flex-direction: row-reverse;
+    }
+    .step-content,
+    .step-visual {
+      flex: 1;
+    }
   }
 
   .placeholder-img {
@@ -217,9 +346,11 @@ import Card from '../../components/Card.astro';
     grid-template-columns: 1fr;
     gap: var(--spacing-8);
   }
-  
+
   @media (min-width: 768px) {
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   .content-card {
@@ -236,9 +367,11 @@ import Card from '../../components/Card.astro';
     max-width: 500px;
     margin: 0 auto;
   }
-  
+
   @media (min-width: 480px) {
-    .newsletter-form { flex-direction: row; }
+    .newsletter-form {
+      flex-direction: row;
+    }
   }
 
   .input-field {
@@ -261,13 +394,170 @@ import Card from '../../components/Card.astro';
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--color-border);
   }
-  
-  .pricing-table th, .pricing-table td {
+
+  .pricing-table th,
+  .pricing-table td {
     padding: var(--spacing-4);
     text-align: left;
     border-bottom: 1px solid var(--color-border);
   }
-  
-  .pricing-table th { background: var(--color-bg-alt); font-weight: 600; }
-  .pricing-table tr:last-child td { border-bottom: none; }
+
+  .pricing-table th {
+    background: var(--color-bg-alt);
+    font-weight: 600;
+  }
+  .pricing-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Waitlist form */
+  .waitlist-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .waitlist-fields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+  }
+
+  @media (min-width: 540px) {
+    .waitlist-fields {
+      flex-direction: row;
+    }
+    .waitlist-fields .input-field {
+      flex: 1;
+    }
+  }
+
+  .select-field {
+    background: var(--color-bg);
+    color: var(--color-text);
+    cursor: pointer;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-3) var(--spacing-6);
+    border-radius: var(--border-radius-full);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition-base);
+    white-space: nowrap;
+  }
+
+  .btn-secondary {
+    background-color: var(--color-secondary, #0ea5e9);
+    color: #fff;
+  }
+
+  .btn-secondary:hover:not(:disabled) {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .form-feedback {
+    margin-top: var(--spacing-3);
+    font-size: 0.95rem;
+    font-weight: 500;
+    min-height: 1.4rem;
+  }
+
+  .form-feedback.success {
+    color: #15803d;
+  }
+  .form-feedback.error {
+    color: #b91c1c;
+  }
 </style>
+
+<script>
+  // ── Kit Configuration ─────────────────────────────────────────────────────
+  const KIT_API_KEY = "kit_1e21bc29479493e270ff52fe004f8190";
+  // DR Web Waitlist form on kit.com
+  const KIT_FORM_ID = "9359896";
+  // ─────────────────────────────────────────────────────────────────────────
+
+  const form = document.getElementById(
+    "waitlist-form",
+  ) as HTMLFormElement | null;
+  const emailInput = document.getElementById(
+    "waitlist-email",
+  ) as HTMLInputElement | null;
+  const roleSelect = document.getElementById(
+    "waitlist-role",
+  ) as HTMLSelectElement | null;
+  const submitBtn = document.getElementById(
+    "waitlist-submit",
+  ) as HTMLButtonElement | null;
+  const feedback = document.getElementById(
+    "waitlist-feedback",
+  ) as HTMLDivElement | null;
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!emailInput || !submitBtn || !feedback) return;
+
+    const email = emailInput.value.trim();
+    if (!email) return;
+
+    const role = roleSelect?.value ?? "";
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Joining…";
+    feedback.textContent = "";
+    feedback.className = "form-feedback";
+
+    try {
+      const payload: Record<string, unknown> = { api_key: KIT_API_KEY, email };
+      if (role) payload.fields = { role };
+
+      const res = await fetch(
+        `https://api.convertkit.com/v3/forms/${KIT_FORM_ID}/subscribe`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        },
+      );
+      const data = (await res.json()) as {
+        subscription?: object;
+        error?: string;
+      };
+
+      if (res.ok && data.subscription) {
+        feedback.textContent =
+          "✓ You're on the list! We'll email you the moment it's live.";
+        feedback.className = "form-feedback success";
+        emailInput.value = "";
+        if (roleSelect) roleSelect.value = "";
+      } else {
+        feedback.textContent =
+          data.error ?? "Something went wrong. Please try again.";
+        feedback.className = "form-feedback error";
+      }
+    } catch {
+      feedback.textContent =
+        "Could not connect. Please check your connection and try again.";
+      feedback.className = "form-feedback error";
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Notify Me When It's Ready";
+    }
+  });
+</script>

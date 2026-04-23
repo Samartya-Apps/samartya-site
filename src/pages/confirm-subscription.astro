@@ -1,0 +1,114 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout
+  title="You're on the list — Samartya Apps"
+  description="Thank you for signing up. Check your inbox to confirm your email address."
+>
+  <section class="section section-light confirm-section">
+    <div class="container text-center confirm-container">
+      <div class="checkmark-circle" aria-hidden="true">
+        <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle class="circle" cx="26" cy="26" r="24" stroke="currentColor" stroke-width="3" fill="none" />
+          <path class="check" d="M14 26l9 9 15-17" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+      <h1 class="mb-4">Check your inbox!</h1>
+      <p class="lead mb-8">
+        We sent you a confirmation email. Click the link inside to complete your
+        signup — it only takes a second.
+      </p>
+      <div class="what-next mb-12">
+        <p class="what-next-title">While you wait, explore our apps</p>
+        <div class="app-links">
+          <a href="/freespeech" class="app-link-card">
+            <img src="/img/freespeech-icon.png" alt="FreeSpeech icon" class="app-icon" />
+            <div>
+              <strong>FreeSpeech</strong>
+              <p>Teach grammar through pictures</p>
+            </div>
+          </a>
+          <a href="/dyslexia-reader" class="app-link-card">
+            <img src="/img/dyslexia-reader-icon.png" alt="Dyslexia Reader icon" class="app-icon" />
+            <div>
+              <strong>Dyslexia Reader</strong>
+              <p>Accessible reading for every classroom</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <Button href="/" variant="outline">Back to home</Button>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .confirm-section {
+    min-height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+  }
+  .confirm-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--spacing-16) var(--spacing-6);
+  }
+  .checkmark-circle {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--spacing-8);
+    color: var(--color-primary);
+  }
+  .circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  }
+  .check {
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.4s cubic-bezier(0.65, 0, 0.45, 1) 0.5s forwards;
+  }
+  @keyframes stroke { to { stroke-dashoffset: 0; } }
+  h1 { font-size: 2.25rem; font-family: var(--font-heading); }
+  .lead { font-size: 1.125rem; color: var(--color-text-muted); max-width: 480px; margin: 0 auto; }
+  .mb-4 { margin-bottom: var(--spacing-4); }
+  .mb-8 { margin-bottom: var(--spacing-8); }
+  .mb-12 { margin-bottom: var(--spacing-12); }
+  .what-next {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-8);
+    text-align: left;
+  }
+  .what-next-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-6);
+  }
+  .app-links { display: flex; flex-direction: column; gap: var(--spacing-4); }
+  @media (min-width: 540px) { .app-links { flex-direction: row; } }
+  .app-link-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    flex: 1;
+    padding: var(--spacing-4);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: var(--transition-base);
+  }
+  .app-link-card:hover { border-color: var(--color-primary); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .app-link-card strong { display: block; font-size: 0.95rem; margin-bottom: 2px; }
+  .app-link-card p { font-size: 0.8rem; color: var(--color-text-muted); margin: 0; }
+  .app-icon { width: 48px; height: 48px; border-radius: var(--border-radius-md); flex-shrink: 0; object-fit: cover; }
+</style>

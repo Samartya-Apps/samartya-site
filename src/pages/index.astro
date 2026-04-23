@@ -235,15 +235,21 @@ import Testimonial from "../components/Testimonial.astro";
         Tips for therapists and teachers, product updates, and research insights
         — delivered monthly. No spam, ever.
       </p>
-      <form class="newsletter-form">
+      <form id="newsletter-form" class="newsletter-form" novalidate>
         <input
+          id="newsletter-email"
           type="email"
           placeholder="Your email address"
           required
           class="input-field"
+          autocomplete="email"
         />
-        <Button variant="primary">Subscribe</Button>
+        <button id="newsletter-submit" type="submit" class="btn btn-primary"
+          >Subscribe</button
+        >
       </form>
+      <div id="newsletter-feedback" class="form-feedback" aria-live="polite">
+      </div>
     </div>
   </section>
 </Layout>
@@ -394,4 +400,117 @@ import Testimonial from "../components/Testimonial.astro";
     border-color: var(--color-primary);
     box-shadow: 0 0 0 3px var(--color-primary-light);
   }
+
+  /* Inline submit button that matches the Button component's primary style */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-3) var(--spacing-6);
+    border-radius: var(--border-radius-full);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition-base);
+    white-space: nowrap;
+  }
+
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: #fff;
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    background-color: var(--color-primary-dark, #1a56b0);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .form-feedback {
+    margin-top: var(--spacing-4);
+    font-size: 0.95rem;
+    font-weight: 500;
+    min-height: 1.4rem;
+  }
+
+  .form-feedback.success {
+    color: #15803d;
+  }
+  .form-feedback.error {
+    color: #b91c1c;
+  }
 </style>
+
+<script>
+  // ── Kit Configuration ─────────────────────────────────────────────────────
+  const KIT_API_KEY = "kit_1e21bc29479493e270ff52fe004f8190";
+  // Newsletter Subscribers form on kit.com
+  const KIT_FORM_ID = "9359890";
+  // ─────────────────────────────────────────────────────────────────────────
+
+  const form = document.getElementById(
+    "newsletter-form",
+  ) as HTMLFormElement | null;
+  const emailInput = document.getElementById(
+    "newsletter-email",
+  ) as HTMLInputElement | null;
+  const submitBtn = document.getElementById(
+    "newsletter-submit",
+  ) as HTMLButtonElement | null;
+  const feedback = document.getElementById(
+    "newsletter-feedback",
+  ) as HTMLDivElement | null;
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!emailInput || !submitBtn || !feedback) return;
+
+    const email = emailInput.value.trim();
+    if (!email) return;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Subscribing…";
+    feedback.textContent = "";
+    feedback.className = "form-feedback";
+
+    try {
+      const res = await fetch(
+        `https://api.convertkit.com/v3/forms/${KIT_FORM_ID}/subscribe`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ api_key: KIT_API_KEY, email }),
+        },
+      );
+      const data = (await res.json()) as {
+        subscription?: object;
+        error?: string;
+      };
+
+      if (res.ok && data.subscription) {
+        feedback.textContent =
+          "✓ You're on the list! Check your inbox to confirm.";
+        feedback.className = "form-feedback success";
+        emailInput.value = "";
+      } else {
+        feedback.textContent =
+          data.error ?? "Something went wrong. Please try again.";
+        feedback.className = "form-feedback error";
+      }
+    } catch {
+      feedback.textContent =
+        "Could not connect. Please check your connection and try again.";
+      feedback.className = "form-feedback error";
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Subscribe";
+    }
+  });
+</script>

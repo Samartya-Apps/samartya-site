@@ -1,0 +1,758 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout
+  title="Join the Waitlist — Dyslexia Reader on the Web | Samartya Apps"
+  description="Dyslexia Reader is coming to the web. No install, any browser, any device. Join the waitlist to be the first to try it."
+>
+  <!-- Hero -->
+  <section class="section section-light waitlist-hero">
+    <div class="container waitlist-hero-inner">
+      <div class="waitlist-hero-text">
+        <div class="coming-soon-badge">Coming Soon</div>
+        <h1 class="mb-4">Dyslexia Reader is coming to the web.</h1>
+        <p class="lead mb-8">
+          No download. No app store. No IT approvals. Upload a PDF or scan a
+          page and experience the full Dyslexia Reader reading support from any
+          browser, on any device — including Chromebooks and school computers.
+        </p>
+        <div class="hero-perks mb-8">
+          <div class="perk">
+            <span class="perk-icon">🖥️</span>
+            <span>Works on any device</span>
+          </div>
+          <div class="perk">
+            <span class="perk-icon">📄</span>
+            <span>Upload PDFs or scan pages</span>
+          </div>
+          <div class="perk">
+            <span class="perk-icon">🔊</span>
+            <span>Full text-to-speech &amp; reading supports</span>
+          </div>
+          <div class="perk">
+            <span class="perk-icon">🏫</span>
+            <span>Perfect for classroom evaluations</span>
+          </div>
+        </div>
+
+        <div class="signup-card" id="signup">
+          <h2 class="signup-title">Be first to know when it's ready.</h2>
+          <p class="signup-sub">
+            We'll send you one email when the web version launches. No
+            newsletters, no spam.
+          </p>
+          <form id="waitlist-form" class="waitlist-form" novalidate>
+            <div class="waitlist-fields">
+              <input
+                id="waitlist-email"
+                type="email"
+                placeholder="Your email address"
+                required
+                class="input-field"
+                autocomplete="email"
+              />
+              <select id="waitlist-role" class="input-field select-field">
+                <option value="">Your role (optional)</option>
+                <option value="teacher">Teacher</option>
+                <option value="slp">Speech-Language Pathologist</option>
+                <option value="parent">Parent / Caregiver</option>
+                <option value="administrator">School Administrator</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <button
+              id="waitlist-submit"
+              type="submit"
+              class="btn btn-primary btn-full"
+            >
+              Notify Me When It's Ready
+            </button>
+          </form>
+          <div id="waitlist-feedback" class="form-feedback" aria-live="polite">
+          </div>
+          <p class="privacy-note">
+            No credit card. No commitment. Unsubscribe any time. See our
+            <a href="/privacy">Privacy Policy</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="waitlist-hero-visual" aria-hidden="true">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="mock-header">
+              <div class="mock-logo">DR</div>
+              <div class="mock-title">Dyslexia Reader Web</div>
+            </div>
+            <div class="mock-upload">
+              <div class="mock-upload-icon">📄</div>
+              <div class="mock-upload-text">Upload PDF or Scan Page</div>
+              <div class="mock-upload-btn">Choose File</div>
+            </div>
+            <div class="mock-text-block">
+              <div class="mock-line mock-line-long"></div>
+              <div class="mock-line mock-line-medium"></div>
+              <div class="mock-line mock-line-short"></div>
+              <div class="mock-line mock-line-long"></div>
+              <div class="mock-line mock-line-medium"></div>
+              <div class="mock-highlighted-word">
+                <span>sy·lla·bi·fi·ca·tion</span>
+                <div class="mock-tooltip">🔊 Hear it · 📖 Syllables</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why it matters -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="text-center mb-12">Why this changes everything</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🚫</div>
+          <h3>No more install barriers</h3>
+          <p>
+            School IT departments often block app installs. The web version
+            requires no installation, no MDM policy changes, no app store
+            approvals. Click the link and you're in.
+          </p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💻</div>
+          <h3>Chromebook &amp; school PC friendly</h3>
+          <p>
+            Many US school districts are 1:1 Chromebook. Dyslexia Reader's web
+            version works natively on any Chrome browser — giving millions more
+            students access.
+          </p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <h3>Try before you commit</h3>
+          <p>
+            Evaluating for your school? Share a link with your AT team. Everyone
+            can try it in under two minutes, with actual classroom materials —
+            before any purchase decision.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social proof / credibility -->
+  <section class="section section-light text-center">
+    <div class="container max-w-m mx-auto">
+      <h2 class="mb-8">Built on 20+ years of research</h2>
+      <div class="credibility-bar">
+        <span>Built with Madras Dyslexia Association</span>
+        <span>Used in classrooms across the US &amp; India</span>
+        <span>iOS &amp; Android — now coming to web</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt">
+    <div class="container max-w-m mx-auto">
+      <h2 class="mb-12 text-center">Frequently asked questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>When does the web version launch?</summary>
+          <p>
+            We're targeting September 2026 to align with the start of the US
+            school year. Waitlist members will be the first to know — and first
+            to try it.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>Is it free to try?</summary>
+          <p>
+            Yes. Like the mobile apps, the web version will have a free 14-day
+            trial with no credit card required. After the trial, existing
+            subscribers can use their current plan on the web too.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>Will it work on Chromebooks?</summary>
+          <p>
+            Yes — that's one of the main reasons we're building it. Any modern
+            browser on any operating system will work, including Chromebooks,
+            Windows school PCs, iPads, and Macs.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>What features will it have at launch?</summary>
+          <p>
+            The core features: PDF upload, text-to-speech with synchronized
+            highlighting, syllabification, onset/rime, and dictionary lookup.
+            Camera-based page scanning will follow in a subsequent release.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>Is it FERPA / COPPA compliant?</summary>
+          <p>
+            Yes. Dyslexia Reader does not collect personal data from students.
+            The web version will adhere to the same privacy standards as the
+            mobile apps. See our <a href="/privacy">Privacy Policy</a> for details.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="section section-primary text-center">
+    <div class="container">
+      <h2 class="mb-4">Still have questions?</h2>
+      <p class="mb-8">
+        Reach out — we'd love to talk about how Dyslexia Reader can work in your
+        school or practice.
+      </p>
+      <Button href="/contact" variant="secondary">Contact us</Button>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* ---- Layout ---- */
+  .waitlist-hero {
+    padding-top: var(--spacing-16);
+    padding-bottom: var(--spacing-16);
+  }
+
+  .waitlist-hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-16);
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .waitlist-hero-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .mb-4 {
+    margin-bottom: var(--spacing-4);
+  }
+  .mb-8 {
+    margin-bottom: var(--spacing-8);
+  }
+  .mb-12 {
+    margin-bottom: var(--spacing-12);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .max-w-m {
+    max-width: 800px;
+  }
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ---- Badge & Typography ---- */
+  .coming-soon-badge {
+    display: inline-block;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--border-radius-full);
+    margin-bottom: var(--spacing-4);
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-family: var(--font-heading);
+    line-height: 1.15;
+  }
+
+  .lead {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    max-width: 560px;
+  }
+
+  /* ---- Perks ---- */
+  .hero-perks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3);
+  }
+
+  .perk {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .perk-icon {
+    font-size: 1.1rem;
+  }
+
+  /* ---- Signup card ---- */
+  .signup-card {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-8);
+    box-shadow: var(--shadow-md);
+  }
+
+  .signup-title {
+    font-size: 1.25rem;
+    font-family: var(--font-heading);
+    margin-bottom: var(--spacing-2);
+  }
+
+  .signup-sub {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-6);
+  }
+
+  /* ---- Form ---- */
+  .waitlist-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+  }
+
+  .waitlist-fields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+
+  @media (min-width: 480px) {
+    .waitlist-fields {
+      flex-direction: row;
+    }
+    .waitlist-fields .input-field {
+      flex: 1;
+    }
+  }
+
+  .input-field {
+    width: 100%;
+    padding: var(--spacing-3) var(--spacing-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-full);
+    font-family: inherit;
+    font-size: 1rem;
+    background: var(--color-bg);
+    color: var(--color-text);
+    outline: none;
+    transition: var(--transition-base);
+    box-sizing: border-box;
+  }
+
+  .input-field:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-primary-light);
+  }
+
+  .select-field {
+    cursor: pointer;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-3) var(--spacing-6);
+    border-radius: var(--border-radius-full);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition-base);
+    white-space: nowrap;
+  }
+
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: #fff;
+  }
+  .btn-primary:hover:not(:disabled) {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  .btn-full {
+    width: 100%;
+  }
+  .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .form-feedback {
+    margin-top: var(--spacing-3);
+    font-size: 0.95rem;
+    font-weight: 500;
+    min-height: 1.4rem;
+  }
+
+  .form-feedback.success {
+    color: #15803d;
+  }
+  .form-feedback.error {
+    color: #b91c1c;
+  }
+
+  .privacy-note {
+    margin-top: var(--spacing-4);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    text-align: center;
+  }
+
+  /* ---- Visual mockup ---- */
+  .waitlist-hero-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .phone-mockup {
+    width: 340px;
+    background: var(--color-bg-surface);
+    border: 1.5px solid var(--color-border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .phone-screen {
+    padding: var(--spacing-6);
+  }
+
+  .mock-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    margin-bottom: var(--spacing-6);
+    padding-bottom: var(--spacing-4);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .mock-logo {
+    width: 32px;
+    height: 32px;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  .mock-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .mock-upload {
+    background: var(--color-bg-alt);
+    border: 2px dashed var(--color-border);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-6);
+    text-align: center;
+    margin-bottom: var(--spacing-6);
+  }
+
+  .mock-upload-icon {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-2);
+  }
+  .mock-upload-text {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-3);
+  }
+  .mock-upload-btn {
+    display: inline-block;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: var(--spacing-1) var(--spacing-4);
+    border-radius: var(--border-radius-full);
+  }
+
+  .mock-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+
+  .mock-line {
+    height: 10px;
+    border-radius: 5px;
+    background: var(--color-border);
+    opacity: 0.7;
+    animation: shimmer 2s ease-in-out infinite;
+  }
+
+  .mock-line-long {
+    width: 100%;
+  }
+  .mock-line-medium {
+    width: 75%;
+  }
+  .mock-line-short {
+    width: 55%;
+  }
+
+  @keyframes shimmer {
+    0%,
+    100% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 0.9;
+    }
+  }
+
+  .mock-highlighted-word {
+    margin-top: var(--spacing-3);
+    background: color-mix(in srgb, var(--color-primary) 15%, transparent);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    position: relative;
+  }
+
+  .mock-tooltip {
+    position: absolute;
+    top: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-text);
+    color: var(--color-bg);
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: var(--border-radius-full);
+    white-space: nowrap;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(-4px);
+    }
+  }
+
+  /* ---- Why grid ---- */
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+
+  @media (min-width: 768px) {
+    .why-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .why-card {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-8);
+    transition: var(--transition-base);
+  }
+
+  .why-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .why-icon {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-4);
+  }
+  .why-card h3 {
+    margin-bottom: var(--spacing-3);
+  }
+  .why-card p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* ---- Credibility ---- */
+  .credibility-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-6);
+    font-weight: 600;
+    color: var(--color-text-muted);
+  }
+
+  .credibility-bar span {
+    padding: var(--spacing-2) var(--spacing-4);
+    background: var(--color-bg-surface);
+    border-radius: var(--border-radius-full);
+    box-shadow: var(--shadow-sm);
+    font-size: 0.9rem;
+  }
+
+  /* ---- FAQ ---- */
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+
+  .faq-item {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    background: var(--color-bg-surface);
+  }
+
+  .faq-item summary {
+    padding: var(--spacing-5) var(--spacing-6);
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition-base);
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: "+";
+    font-size: 1.4rem;
+    color: var(--color-primary);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  .faq-item[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  .faq-item summary:hover {
+    background: var(--color-bg-alt);
+  }
+
+  .faq-item p {
+    padding: 0 var(--spacing-6) var(--spacing-5);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* ---- Section primary ---- */
+  .section-primary {
+    background-color: var(--color-primary-light);
+  }
+</style>
+
+<script>
+  // ── Kit Configuration ─────────────────────────────────────────────────────
+  const KIT_API_KEY = "kit_1e21bc29479493e270ff52fe004f8190";
+  // DR Web Waitlist form on kit.com
+  const KIT_FORM_ID = "9359896";
+  // ─────────────────────────────────────────────────────────────────────────
+
+  const form = document.getElementById(
+    "waitlist-form",
+  ) as HTMLFormElement | null;
+  const emailInput = document.getElementById(
+    "waitlist-email",
+  ) as HTMLInputElement | null;
+  const roleSelect = document.getElementById(
+    "waitlist-role",
+  ) as HTMLSelectElement | null;
+  const submitBtn = document.getElementById(
+    "waitlist-submit",
+  ) as HTMLButtonElement | null;
+  const feedback = document.getElementById(
+    "waitlist-feedback",
+  ) as HTMLDivElement | null;
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!emailInput || !submitBtn || !feedback) return;
+
+    const email = emailInput.value.trim();
+    if (!email) return;
+
+    const role = roleSelect?.value ?? "";
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Joining waitlist…";
+    feedback.textContent = "";
+    feedback.className = "form-feedback";
+
+    try {
+      const payload: Record<string, unknown> = { api_key: KIT_API_KEY, email };
+      if (role) payload.fields = { role };
+
+      const res = await fetch(
+        `https://api.convertkit.com/v3/forms/${KIT_FORM_ID}/subscribe`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        },
+      );
+      const data = (await res.json()) as {
+        subscription?: object;
+        error?: string;
+      };
+
+      if (res.ok && data.subscription) {
+        feedback.textContent =
+          "✓ You're on the list! We'll email you the moment it's live.";
+        feedback.className = "form-feedback success";
+        emailInput.value = "";
+        if (roleSelect) roleSelect.value = "";
+      } else {
+        feedback.textContent =
+          data.error ?? "Something went wrong. Please try again.";
+        feedback.className = "form-feedback error";
+      }
+    } catch {
+      feedback.textContent =
+        "Could not connect. Please check your connection and try again.";
+      feedback.className = "form-feedback error";
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Notify Me When It's Ready";
+    }
+  });
+</script>
