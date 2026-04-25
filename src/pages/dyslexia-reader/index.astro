@@ -26,11 +26,11 @@ import Card from "../../components/Card.astro";
       </p>
     </Fragment>
     <Fragment slot="visual">
-      <div class="video-placeholder">
-        <div class="box">
-          Screenshot: Student using Dyslexia Reader on a tablet
-        </div>
-      </div>
+      <img
+        src="/img/boy-with-reader.jpg"
+        alt="A child using the Dyslexia Reader app on an iPad to read a story"
+        class="hero-image"
+      />
     </Fragment>
   </Hero>
 
@@ -287,16 +287,22 @@ import Card from "../../components/Card.astro";
     margin-right: auto;
   }
 
-  .video-placeholder {
-    aspect-ratio: 4/3;
-    background: var(--color-border);
-    border-radius: var(--border-radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .hero-image {
     width: 100%;
-    color: var(--color-text-muted);
-    font-weight: 600;
+    height: auto;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+    transition: var(--transition-base);
+  }
+
+  .hero-image:hover {
+    transform: scale(1.02);
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   .box {
@@ -528,25 +534,24 @@ import Card from "../../components/Card.astro";
       if (role) payload.custom_fields = { role };
 
       // Step 1: Upsert the subscriber to get their ID
-      const subRes = await fetch(
-        "https://api.kit.com/v4/subscribers",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-Kit-Api-Key": KIT_API_KEY,
-          },
-          body: JSON.stringify(payload),
+      const subRes = await fetch("https://api.kit.com/v4/subscribers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Kit-Api-Key": KIT_API_KEY,
         },
-      );
-      
+        body: JSON.stringify(payload),
+      });
+
       const subData = (await subRes.json()) as {
         subscriber?: { id: number };
         errors?: { message: string }[];
       };
 
       if (!subRes.ok || !subData.subscriber?.id) {
-        throw new Error(subData.errors?.[0]?.message || "Failed to create subscriber");
+        throw new Error(
+          subData.errors?.[0]?.message || "Failed to create subscriber",
+        );
       }
 
       // Step 2: Add the subscriber to the form
@@ -560,7 +565,7 @@ import Card from "../../components/Card.astro";
           },
         },
       );
-      
+
       const formData = (await formRes.json()) as {
         subscriber?: object;
         errors?: { message: string }[];
@@ -573,10 +578,15 @@ import Card from "../../components/Card.astro";
         emailInput.value = "";
         if (roleSelect) roleSelect.value = "";
       } else {
-        throw new Error(formData.errors?.[0]?.message || "Failed to add to form");
+        throw new Error(
+          formData.errors?.[0]?.message || "Failed to add to form",
+        );
       }
     } catch (err) {
-      feedback.textContent = err instanceof Error ? err.message : "Something went wrong. Please try again.";
+      feedback.textContent =
+        err instanceof Error
+          ? err.message
+          : "Something went wrong. Please try again.";
       feedback.className = "form-feedback error";
     } finally {
       submitBtn.disabled = false;
