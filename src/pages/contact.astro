@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Button from '../components/Button.astro';
 ---
 
 <Layout 
@@ -17,21 +16,32 @@ import Button from '../components/Button.astro';
   <section class="section section-alt">
     <div class="container max-w-m mx-auto">
       <div class="form-container">
-        <form class="contact-form">
+        <form
+          id="contact-form"
+          class="contact-form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input type="hidden" name="access_key" value="dc5d701d-10d7-41c3-b56d-aefa709b456c" />
+          <input type="hidden" name="subject" value="New contact message — samartya.com" />
+          <input type="hidden" name="from_name" value="Samartya Contact Form" />
+          <!-- Honeypot: humans leave it empty; bots fill it in -->
+          <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
           <div class="form-row">
             <div class="form-group flex-1">
               <label for="first-name">First Name *</label>
-              <input type="text" id="first-name" name="first-name" required class="input-field" />
+              <input type="text" id="first-name" name="first-name" required class="input-field" autocomplete="given-name" />
             </div>
             <div class="form-group flex-1">
               <label for="last-name">Last Name *</label>
-              <input type="text" id="last-name" name="last-name" required class="input-field" />
+              <input type="text" id="last-name" name="last-name" required class="input-field" autocomplete="family-name" />
             </div>
           </div>
 
           <div class="form-group">
             <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" required class="input-field" />
+            <input type="email" id="email" name="email" required class="input-field" autocomplete="email" />
           </div>
 
           <div class="form-group">
@@ -52,8 +62,10 @@ import Button from '../components/Button.astro';
           </div>
 
           <div class="form-actions text-center mt-4">
-            <Button variant="primary">Send Message</Button>
+            <button id="contact-submit" type="submit" class="btn btn-primary">Send Message</button>
           </div>
+
+          <div id="contact-feedback" class="form-feedback" aria-live="polite"></div>
         </form>
       </div>
       
@@ -151,4 +163,78 @@ import Button from '../components/Button.astro';
   .contact-info h3 {
     margin-bottom: var(--spacing-2);
   }
+
+  /* Honeypot — visually hidden but still in the DOM */
+  .hp-field {
+    position: absolute !important;
+    left: -10000px !important;
+    width: 1px !important;
+    height: 1px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .form-feedback {
+    margin-top: var(--spacing-3);
+    font-size: 0.95rem;
+    font-weight: 500;
+    min-height: 1.4rem;
+    text-align: center;
+  }
+  .form-feedback.success { color: #15803d; }
+  .form-feedback.error   { color: #b91c1c; }
+
+  .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 </style>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contact-form");
+    const result = document.getElementById("contact-feedback");
+    if (!form || !result) return;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const json = JSON.stringify(Object.fromEntries(formData));
+
+      result.className = "form-feedback";
+      result.innerHTML = "Sending…";
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      })
+        .then(async (response) => {
+          const data = await response.json();
+          if (response.status === 200) {
+            result.className = "form-feedback success";
+            result.innerHTML = "✓ Thanks! We'll reply within one business day.";
+          } else {
+            console.error(response);
+            result.className = "form-feedback error";
+            result.innerHTML = data.message || "Something went wrong.";
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          result.className = "form-feedback error";
+          result.innerHTML = "Something went wrong. Please email support@samartya.com.";
+        })
+        .then(() => {
+          form.reset();
+          setTimeout(() => {
+            result.innerHTML = "";
+            result.className = "form-feedback";
+          }, 6000);
+        });
+    });
+  });
+</script>
