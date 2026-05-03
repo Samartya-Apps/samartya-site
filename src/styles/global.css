@@ -94,6 +94,14 @@ ul {
   padding: 0 var(--spacing-4);
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+  justify-content: center;
+
+}
+
 /* Utilities */
 .text-center { text-align: center; }
 .section { padding: var(--spacing-16) 0; }
